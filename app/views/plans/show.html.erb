@@ -1,0 +1,18 @@
+<p>
+  <b>Content:</b>
+  <%=h @plan.content %>
+</p>
+
+<p>
+  <b>Start:</b>
+  <%=h @plan.start %>
+</p>
+
+<p>
+  <b>Flag:</b>
+  <%=h @plan.flag %>
+</p>
+
+
+<%= link_to 'Edit', edit_plan_path(@plan) %> |
+<%= link_to 'Back', plans_path %>

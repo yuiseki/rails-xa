@@ -1,0 +1,2445 @@
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:19:46) [GET]
+  Session ID: e509738bc9a1e6167069557c04a87fa5
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: plans: SELECT * FROM plans [0m
+
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: plans: SELECT * FROM plans   ):
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract_adapter.rb:150:in `log'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/sqlite_adapter.rb:345:in `catch_schema_changes'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/sqlite_adapter.rb:256:in `select'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:53:in `select_all'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:74:in `cache_sql'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:53:in `select_all'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:532:in `find_by_sql'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1233:in `find_every'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:503:in `find'
+    /app/controllers/plans_controller.rb:5:in `index'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mSQL (0.000683)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.297484)[0m   [0mCREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.096093)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000365)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreatePlans (1)
+  [4;35;1mSQL (0.228257)[0m   [0mCREATE TABLE plans ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255) DEFAULT NULL, "start" datetime DEFAULT NULL, "flag" boolean DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.082929)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000359)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000370)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000141)[0m   [0mPRAGMA index_list(plans)[0m
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:20:05) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--4b56d11e9e294eeb260ef566ead5e13a7053ca38
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000800)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.01289 (77 reqs/sec) | Rendering: 0.00432 (33%) | DB: 0.00080 (6%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#new (for 122.16.148.55 at 2008-12-28 00:20:12) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--4b56d11e9e294eeb260ef566ead5e13a7053ca38
+  Parameters: {"action"=>"new", "controller"=>"plans"}
+Rendering template within layouts/plans
+Rendering plans/new
+Completed in 0.01584 (63 reqs/sec) | Rendering: 0.00685 (43%) | DB: 0.00000 (0%) | 200 OK [http://yuiseki.net/plans/new]
+
+
+Processing PlansController#create (for 122.16.148.55 at 2008-12-28 00:20:50) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"commit"=>"Create", "plan"=>{"start(1i)"=>"2008", "start(2i)"=>"12", "flag"=>"0", "start(3i)"=>"28", "content"=>"NULL", "start(4i)"=>"00", "start(5i)"=>"00"}, "authenticity_token"=>"959a01a1cdb47773daa63fac45ae6d0858d160a8", "action"=>"create", "controller"=>"plans"}
+  [4;36;1mPlan Create (0.000671)[0m   [0;1mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:20:50', 'f', '2008-12-28 00:00:00', 'NULL', '2008-12-28 00:20:50')[0m
+Redirected to http://yuiseki.net:3000/plans/1
+Completed in 0.12074 (8 reqs/sec) | DB: 0.00067 (0%) | 302 Found [http://yuiseki.net/plans]
+
+
+Processing PlansController#show (for 122.16.148.55 at 2008-12-28 00:20:50) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiNQbGFuIHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4G%0AOgpAdXNlZHsGOwdU--aa99f91233dbb7739e37b621aba91b10fdf8b95b
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000516)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/show
+Completed in 0.01292 (77 reqs/sec) | Rendering: 0.00359 (27%) | DB: 0.00052 (3%) | 200 OK [http://yuiseki.net/plans/1]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:20:53) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000676)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.01236 (80 reqs/sec) | Rendering: 0.00454 (36%) | DB: 0.00068 (5%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 00:20:55) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.069439)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.08543 (11 reqs/sec) | Rendering: 0.00670 (7%) | DB: 0.06944 (81%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#update (for 122.16.148.55 at 2008-12-28 00:21:07) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"commit"=>"Update", "plan"=>{"start(1i)"=>"2008", "start(2i)"=>"12", "flag"=>"0", "start(3i)"=>"31", "content"=>"NULL", "start(4i)"=>"12", "start(5i)"=>"00"}, "authenticity_token"=>"959a01a1cdb47773daa63fac45ae6d0858d160a8", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000509)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+  [4;35;1mPlan Update (0.000393)[0m   [0mUPDATE plans SET "created_at" = '2008-12-28 00:20:50', "start" = '2008-12-31 12:00:00', "flag" = 'f', "content" = 'NULL', "updated_at" = '2008-12-28 00:21:07' WHERE "id" = 1[0m
+Redirected to http://yuiseki.net:3000/plans/1
+Completed in 0.11507 (8 reqs/sec) | DB: 0.00090 (0%) | 302 Found [http://yuiseki.net/plans/1]
+
+
+Processing PlansController#show (for 122.16.148.55 at 2008-12-28 00:21:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiNQbGFuIHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRlZC4G%0AOgpAdXNlZHsGOwdU--0edd862b8b3fb055a30fae19718767b87403c146
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000493)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/show
+Completed in 0.01269 (78 reqs/sec) | Rendering: 0.00263 (20%) | DB: 0.00049 (3%) | 200 OK [http://yuiseki.net/plans/1]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:21:09) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000663)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.01251 (79 reqs/sec) | Rendering: 0.00455 (36%) | DB: 0.00066 (5%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:21:30) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000660)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.01222 (81 reqs/sec) | Rendering: 0.00449 (36%) | DB: 0.00066 (5%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:21:30) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000649)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.01217 (82 reqs/sec) | Rendering: 0.00451 (37%) | DB: 0.00065 (5%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#show (for 122.16.148.55 at 2008-12-28 00:47:40) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000445)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/show
+Completed in 0.01182 (84 reqs/sec) | Rendering: 0.00254 (21%) | DB: 0.00045 (3%) | 200 OK [http://yuiseki.net/plans/1]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:47:47) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000748)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.01307 (76 reqs/sec) | Rendering: 0.00471 (36%) | DB: 0.00075 (5%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#new (for 122.16.148.55 at 2008-12-28 00:47:55) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"new", "controller"=>"plans"}
+Rendering template within layouts/plans
+Rendering plans/new
+Completed in 0.01365 (73 reqs/sec) | Rendering: 0.00479 (35%) | DB: 0.00000 (0%) | 200 OK [http://yuiseki.net/plans/new]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:47:56) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000731)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.01302 (76 reqs/sec) | Rendering: 0.00504 (38%) | DB: 0.00073 (5%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:49:39) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000646)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.01227 (81 reqs/sec) | Rendering: 0.00453 (36%) | DB: 0.00065 (5%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:49:40) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000661)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.01217 (82 reqs/sec) | Rendering: 0.00450 (36%) | DB: 0.00066 (5%) | 200 OK [http://yuiseki.net/plans]
+  [4;36;1mPlan Create (0.000666)[0m   [0;1mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:10', 'f', '2008-12-31 13:00:00', '未定', '2008-12-28 00:51:10')[0m
+  [4;35;1mPlan Create (0.000266)[0m   [0mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:11', 'f', '2008-12-31 14:00:00', '未定', '2008-12-28 00:51:11')[0m
+  [4;36;1mPlan Create (0.000266)[0m   [0;1mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:11', 'f', '2008-12-31 15:00:00', '未定', '2008-12-28 00:51:11')[0m
+  [4;35;1mPlan Create (0.000315)[0m   [0mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:11', 'f', '2008-12-31 16:00:00', '未定', '2008-12-28 00:51:11')[0m
+  [4;36;1mPlan Create (0.000264)[0m   [0;1mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:11', 'f', '2008-12-31 17:00:00', '未定', '2008-12-28 00:51:11')[0m
+  [4;35;1mPlan Create (0.000265)[0m   [0mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:11', 'f', '2008-12-31 18:00:00', '未定', '2008-12-28 00:51:11')[0m
+  [4;36;1mPlan Create (0.000265)[0m   [0;1mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:11', 'f', '2008-12-31 19:00:00', '未定', '2008-12-28 00:51:11')[0m
+  [4;35;1mPlan Create (0.000268)[0m   [0mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:11', 'f', '2008-12-31 20:00:00', '未定', '2008-12-28 00:51:11')[0m
+  [4;36;1mPlan Create (0.000269)[0m   [0;1mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:11', 'f', '2008-12-31 21:00:00', '未定', '2008-12-28 00:51:11')[0m
+  [4;35;1mPlan Create (0.000267)[0m   [0mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:11', 'f', '2008-12-31 22:00:00', '未定', '2008-12-28 00:51:11')[0m
+  [4;36;1mPlan Create (0.000268)[0m   [0;1mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:11', 'f', '2008-12-31 23:00:00', '未定', '2008-12-28 00:51:11')[0m
+  [4;35;1mPlan Create (0.000264)[0m   [0mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:11', 'f', '2009-01-01 00:00:00', '未定', '2008-12-28 00:51:11')[0m
+  [4;36;1mPlan Create (0.000294)[0m   [0;1mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:11', 'f', '2009-01-01 01:00:00', '未定', '2008-12-28 00:51:11')[0m
+  [4;35;1mPlan Create (0.000270)[0m   [0mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:12', 'f', '2009-01-01 02:00:00', '未定', '2008-12-28 00:51:12')[0m
+  [4;36;1mPlan Create (0.000268)[0m   [0;1mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:12', 'f', '2009-01-01 03:00:00', '未定', '2008-12-28 00:51:12')[0m
+  [4;35;1mPlan Create (0.000270)[0m   [0mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:12', 'f', '2009-01-01 04:00:00', '未定', '2008-12-28 00:51:12')[0m
+  [4;36;1mPlan Create (0.000271)[0m   [0;1mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:12', 'f', '2009-01-01 05:00:00', '未定', '2008-12-28 00:51:12')[0m
+  [4;35;1mPlan Create (0.000272)[0m   [0mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:12', 'f', '2009-01-01 06:00:00', '未定', '2008-12-28 00:51:12')[0m
+  [4;36;1mPlan Create (0.000270)[0m   [0;1mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:12', 'f', '2009-01-01 07:00:00', '未定', '2008-12-28 00:51:12')[0m
+  [4;35;1mPlan Create (0.000273)[0m   [0mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:12', 'f', '2009-01-01 08:00:00', '未定', '2008-12-28 00:51:12')[0m
+  [4;36;1mPlan Create (0.000270)[0m   [0;1mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:12', 'f', '2009-01-01 09:00:00', '未定', '2008-12-28 00:51:12')[0m
+  [4;35;1mPlan Create (0.000277)[0m   [0mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:12', 'f', '2009-01-01 10:00:00', '未定', '2008-12-28 00:51:12')[0m
+  [4;36;1mPlan Create (0.000274)[0m   [0;1mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:12', 'f', '2009-01-01 11:00:00', '未定', '2008-12-28 00:51:12')[0m
+  [4;35;1mPlan Create (0.000274)[0m   [0mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:12', 'f', '2009-01-01 12:00:00', '未定', '2008-12-28 00:51:12')[0m
+  [4;36;1mPlan Create (0.000273)[0m   [0;1mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:12', 'f', '2009-01-01 13:00:00', '未定', '2008-12-28 00:51:12')[0m
+  [4;35;1mPlan Create (0.000281)[0m   [0mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:12', 'f', '2009-01-01 14:00:00', '未定', '2008-12-28 00:51:12')[0m
+  [4;36;1mPlan Create (0.000275)[0m   [0;1mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:13', 'f', '2009-01-01 15:00:00', '未定', '2008-12-28 00:51:13')[0m
+  [4;35;1mPlan Create (0.000272)[0m   [0mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:13', 'f', '2009-01-01 16:00:00', '未定', '2008-12-28 00:51:13')[0m
+  [4;36;1mPlan Create (0.000276)[0m   [0;1mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:13', 'f', '2009-01-01 17:00:00', '未定', '2008-12-28 00:51:13')[0m
+  [4;35;1mPlan Create (0.000273)[0m   [0mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:13', 'f', '2009-01-01 18:00:00', '未定', '2008-12-28 00:51:13')[0m
+  [4;36;1mPlan Create (0.000276)[0m   [0;1mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:13', 'f', '2009-01-01 19:00:00', '未定', '2008-12-28 00:51:13')[0m
+  [4;35;1mPlan Create (0.000269)[0m   [0mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:13', 'f', '2009-01-01 20:00:00', '未定', '2008-12-28 00:51:13')[0m
+  [4;36;1mPlan Create (0.000270)[0m   [0;1mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:13', 'f', '2009-01-01 21:00:00', '未定', '2008-12-28 00:51:13')[0m
+  [4;35;1mPlan Create (0.000272)[0m   [0mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:13', 'f', '2009-01-01 22:00:00', '未定', '2008-12-28 00:51:13')[0m
+  [4;36;1mPlan Create (0.000280)[0m   [0;1mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:13', 'f', '2009-01-01 23:00:00', '未定', '2008-12-28 00:51:13')[0m
+  [4;35;1mPlan Create (0.000274)[0m   [0mINSERT INTO plans ("updated_at", "flag", "start", "content", "created_at") VALUES('2008-12-28 00:51:13', 'f', '2009-01-02 00:00:00', '未定', '2008-12-28 00:51:13')[0m
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:51:17) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005700)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.03120 (32 reqs/sec) | Rendering: 0.01688 (54%) | DB: 0.00570 (18%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 00:51:21) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000512)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01488 (67 reqs/sec) | Rendering: 0.00504 (33%) | DB: 0.00051 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#update (for 122.16.148.55 at 2008-12-28 00:51:25) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"commit"=>"Update", "plan"=>{"start(1i)"=>"2008", "start(2i)"=>"12", "flag"=>"0", "start(3i)"=>"31", "content"=>"未定", "start(4i)"=>"12", "start(5i)"=>"00"}, "authenticity_token"=>"959a01a1cdb47773daa63fac45ae6d0858d160a8", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000505)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+  [4;36;1mPlan Update (0.000359)[0m   [0;1mUPDATE plans SET "created_at" = '2008-12-28 00:20:50', "start" = '2008-12-31 12:00:00', "flag" = 'f', "content" = '未定', "updated_at" = '2008-12-28 00:51:25' WHERE "id" = 1[0m
+Redirected to http://yuiseki.net:3000/plans/1
+Completed in 0.13394 (7 reqs/sec) | DB: 0.00086 (0%) | 302 Found [http://yuiseki.net/plans/1]
+
+
+Processing PlansController#show (for 122.16.148.55 at 2008-12-28 00:51:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiNQbGFuIHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRlZC4G%0AOgpAdXNlZHsGOwdU--0edd862b8b3fb055a30fae19718767b87403c146
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000483)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/show
+Completed in 0.01200 (83 reqs/sec) | Rendering: 0.00255 (21%) | DB: 0.00048 (4%) | 200 OK [http://yuiseki.net/plans/1]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:51:27) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005633)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.03091 (32 reqs/sec) | Rendering: 0.01613 (52%) | DB: 0.00563 (18%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:54:26) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005663)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.03055 (32 reqs/sec) | Rendering: 0.01578 (51%) | DB: 0.00566 (18%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:54:55) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005947)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.09461 (10 reqs/sec) | Rendering: 0.00930 (9%) | DB: 0.00595 (6%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:55:04) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005780)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02298 (43 reqs/sec) | Rendering: 0.00814 (35%) | DB: 0.00578 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:55:38) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005751)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02299 (43 reqs/sec) | Rendering: 0.00833 (36%) | DB: 0.00575 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:55:38) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005672)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02112 (47 reqs/sec) | Rendering: 0.00677 (32%) | DB: 0.00567 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:55:38) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005668)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02151 (46 reqs/sec) | Rendering: 0.00677 (31%) | DB: 0.00567 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:57:03) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005631)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02240 (44 reqs/sec) | Rendering: 0.00808 (36%) | DB: 0.00563 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:57:45) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005808)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02303 (43 reqs/sec) | Rendering: 0.00803 (34%) | DB: 0.00581 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:57:51) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005731)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02242 (44 reqs/sec) | Rendering: 0.00676 (30%) | DB: 0.00573 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:57:59) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005671)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02278 (43 reqs/sec) | Rendering: 0.00777 (34%) | DB: 0.00567 (24%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 00:58:05) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"8", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000465)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 8) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01400 (71 reqs/sec) | Rendering: 0.00515 (36%) | DB: 0.00047 (3%) | 200 OK [http://yuiseki.net/plans/8/edit]
+
+
+Processing PlansController#update (for 122.16.148.55 at 2008-12-28 00:58:11) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"commit"=>"Update", "plan"=>{"start(1i)"=>"2008", "start(2i)"=>"12", "flag"=>"0", "start(3i)"=>"31", "content"=>"うんこ鍋", "start(4i)"=>"19", "start(5i)"=>"00"}, "authenticity_token"=>"959a01a1cdb47773daa63fac45ae6d0858d160a8", "_method"=>"put", "action"=>"update", "id"=>"8", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000449)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 8) [0m
+  [4;35;1mPlan Update (0.000311)[0m   [0mUPDATE plans SET "created_at" = '2008-12-28 00:51:11', "start" = '2008-12-31 19:00:00', "flag" = 'f', "content" = 'うんこ鍋', "updated_at" = '2008-12-28 00:58:11' WHERE "id" = 8[0m
+Redirected to http://yuiseki.net:3000/plans/8
+Completed in 0.15769 (6 reqs/sec) | DB: 0.00076 (0%) | 302 Found [http://yuiseki.net/plans/8]
+
+
+Processing PlansController#show (for 122.16.148.55 at 2008-12-28 00:58:11) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiNQbGFuIHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRlZC4G%0AOgpAdXNlZHsGOwdU--0edd862b8b3fb055a30fae19718767b87403c146
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000501)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 8) [0m
+Rendering template within layouts/plans
+Rendering plans/show
+Completed in 0.01176 (85 reqs/sec) | Rendering: 0.00253 (21%) | DB: 0.00050 (4%) | 200 OK [http://yuiseki.net/plans/8]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:58:13) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005838)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02190 (45 reqs/sec) | Rendering: 0.00687 (31%) | DB: 0.00584 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:58:31) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005778)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02321 (43 reqs/sec) | Rendering: 0.00790 (34%) | DB: 0.00578 (24%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:58:44) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005660)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02218 (45 reqs/sec) | Rendering: 0.00775 (34%) | DB: 0.00566 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:59:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005632)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02241 (44 reqs/sec) | Rendering: 0.00765 (34%) | DB: 0.00563 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:59:30) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005632)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02238 (44 reqs/sec) | Rendering: 0.00764 (34%) | DB: 0.00563 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 00:59:31) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.031433)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.06557 (15 reqs/sec) | Rendering: 0.02495 (38%) | DB: 0.03143 (47%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:00:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005806)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02355 (42 reqs/sec) | Rendering: 0.00800 (33%) | DB: 0.00581 (24%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:00:08) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005757)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02144 (46 reqs/sec) | Rendering: 0.00668 (31%) | DB: 0.00576 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:00:16) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005671)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02267 (44 reqs/sec) | Rendering: 0.00823 (36%) | DB: 0.00567 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:00:16) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005634)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.04571 (21 reqs/sec) | Rendering: 0.01469 (32%) | DB: 0.00563 (12%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:00:20) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"8", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000451)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 8) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01390 (71 reqs/sec) | Rendering: 0.00514 (36%) | DB: 0.00045 (3%) | 200 OK [http://yuiseki.net/plans/8/edit]
+
+
+Processing PlansController#update (for 122.16.148.55 at 2008-12-28 01:00:26) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"commit"=>"Update", "plan"=>{"start(1i)"=>"2008", "start(2i)"=>"12", "flag"=>"0", "start(3i)"=>"31", "content"=>"うんこを鍋で煮込む", "start(4i)"=>"19", "start(5i)"=>"00"}, "authenticity_token"=>"959a01a1cdb47773daa63fac45ae6d0858d160a8", "_method"=>"put", "action"=>"update", "id"=>"8", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000546)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 8) [0m
+  [4;35;1mPlan Update (0.000401)[0m   [0mUPDATE plans SET "created_at" = '2008-12-28 00:51:11', "start" = '2008-12-31 19:00:00', "flag" = 'f', "content" = 'うんこを鍋で煮込む', "updated_at" = '2008-12-28 01:00:26' WHERE "id" = 8[0m
+Redirected to http://yuiseki.net:3000/plans/8
+Completed in 0.66378 (1 reqs/sec) | DB: 0.00095 (0%) | 302 Found [http://yuiseki.net/plans/8]
+
+
+Processing PlansController#show (for 122.16.148.55 at 2008-12-28 01:00:27) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiNQbGFuIHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRlZC4G%0AOgpAdXNlZHsGOwdU--0edd862b8b3fb055a30fae19718767b87403c146
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000537)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 8) [0m
+Rendering template within layouts/plans
+Rendering plans/show
+Completed in 0.01258 (79 reqs/sec) | Rendering: 0.00263 (20%) | DB: 0.00054 (4%) | 200 OK [http://yuiseki.net/plans/8]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:00:29) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.012478)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.03686 (27 reqs/sec) | Rendering: 0.01094 (29%) | DB: 0.01248 (33%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:01:13) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000480)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 13) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01371 (72 reqs/sec) | Rendering: 0.00478 (34%) | DB: 0.00048 (3%) | 200 OK [http://yuiseki.net/plans/13/edit]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:01:17) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005653)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02091 (47 reqs/sec) | Rendering: 0.00659 (31%) | DB: 0.00565 (27%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:01:19) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"12", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000453)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 12) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01347 (74 reqs/sec) | Rendering: 0.00473 (35%) | DB: 0.00045 (3%) | 200 OK [http://yuiseki.net/plans/12/edit]
+
+
+Processing PlansController#update (for 122.16.148.55 at 2008-12-28 01:01:31) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"commit"=>"Update", "plan"=>{"start(1i)"=>"2008", "start(2i)"=>"12", "flag"=>"0", "start(3i)"=>"31", "content"=>"渋谷スクランブル交差点に向かう", "start(4i)"=>"23", "start(5i)"=>"00"}, "authenticity_token"=>"959a01a1cdb47773daa63fac45ae6d0858d160a8", "_method"=>"put", "action"=>"update", "id"=>"12", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000452)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 12) [0m
+  [4;36;1mPlan Update (0.000376)[0m   [0;1mUPDATE plans SET "created_at" = '2008-12-28 00:51:11', "start" = '2008-12-31 23:00:00', "flag" = 'f', "content" = '渋谷スクランブル交差点に向かう', "updated_at" = '2008-12-28 01:01:31' WHERE "id" = 12[0m
+Redirected to http://yuiseki.net:3000/plans/12
+Completed in 0.13774 (7 reqs/sec) | DB: 0.00083 (0%) | 302 Found [http://yuiseki.net/plans/12]
+
+
+Processing PlansController#show (for 122.16.148.55 at 2008-12-28 01:01:31) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiNQbGFuIHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRlZC4G%0AOgpAdXNlZHsGOwdU--0edd862b8b3fb055a30fae19718767b87403c146
+  Parameters: {"action"=>"show", "id"=>"12", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000563)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 12) [0m
+Rendering template within layouts/plans
+Rendering plans/show
+Completed in 0.01268 (78 reqs/sec) | Rendering: 0.00268 (21%) | DB: 0.00056 (4%) | 200 OK [http://yuiseki.net/plans/12]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:01:33) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005748)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02166 (46 reqs/sec) | Rendering: 0.00672 (31%) | DB: 0.00575 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:01:36) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000487)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 13) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01382 (72 reqs/sec) | Rendering: 0.00479 (34%) | DB: 0.00049 (3%) | 200 OK [http://yuiseki.net/plans/13/edit]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:01:39) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005648)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02093 (47 reqs/sec) | Rendering: 0.00660 (31%) | DB: 0.00565 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:03:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005658)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02226 (44 reqs/sec) | Rendering: 0.00800 (35%) | DB: 0.00566 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:03:58) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005633)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02127 (47 reqs/sec) | Rendering: 0.00654 (30%) | DB: 0.00563 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:03:59) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005805)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02203 (45 reqs/sec) | Rendering: 0.00685 (31%) | DB: 0.00581 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:03:59) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005747)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02144 (46 reqs/sec) | Rendering: 0.00675 (31%) | DB: 0.00575 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:04:00) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005702)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02113 (47 reqs/sec) | Rendering: 0.00660 (31%) | DB: 0.00570 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:04:00) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005660)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02137 (46 reqs/sec) | Rendering: 0.00657 (30%) | DB: 0.00566 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:08:42) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"19", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000455)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 19) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01343 (74 reqs/sec) | Rendering: 0.00467 (34%) | DB: 0.00045 (3%) | 200 OK [http://yuiseki.net/plans/19/edit]
+
+
+Processing PlansController#update (for 122.16.148.55 at 2008-12-28 01:08:50) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"commit"=>"Update", "plan"=>{"start(1i)"=>"2009", "start(2i)"=>"1", "flag"=>"0", "start(3i)"=>"1", "content"=>"神田明神お参り", "start(4i)"=>"06", "start(5i)"=>"00"}, "authenticity_token"=>"959a01a1cdb47773daa63fac45ae6d0858d160a8", "_method"=>"put", "action"=>"update", "id"=>"19", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000453)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 19) [0m
+  [4;35;1mPlan Update (0.000334)[0m   [0mUPDATE plans SET "created_at" = '2008-12-28 00:51:12', "start" = '2009-01-01 06:00:00', "flag" = 'f', "content" = '神田明神お参り', "updated_at" = '2008-12-28 01:08:50' WHERE "id" = 19[0m
+
+
+NameError (undefined local variable or method `plan' for #<PlansController:0xb5792b14>):
+    /app/controllers/plans_controller.rb:65:in `update'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    /app/controllers/plans_controller.rb:62:in `update'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:09:12) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiNQbGFuIHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRlZC4G%0AOgpAdXNlZHsGOwdU--0edd862b8b3fb055a30fae19718767b87403c146
+  Parameters: {"action"=>"edit", "id"=>"19", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000459)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 19) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01368 (73 reqs/sec) | Rendering: 0.00477 (34%) | DB: 0.00046 (3%) | 200 OK [http://yuiseki.net/plans/19/edit]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:09:12) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005654)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02089 (47 reqs/sec) | Rendering: 0.00656 (31%) | DB: 0.00565 (27%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:09:13) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005665)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02129 (46 reqs/sec) | Rendering: 0.00659 (30%) | DB: 0.00567 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:09:16) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"19", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000453)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 19) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01339 (74 reqs/sec) | Rendering: 0.00468 (34%) | DB: 0.00045 (3%) | 200 OK [http://yuiseki.net/plans/19/edit]
+
+
+Processing PlansController#update (for 122.16.148.55 at 2008-12-28 01:09:17) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"commit"=>"Update", "plan"=>{"start(1i)"=>"2009", "start(2i)"=>"1", "flag"=>"0", "start(3i)"=>"1", "content"=>"神田明神お参り", "start(4i)"=>"06", "start(5i)"=>"00"}, "authenticity_token"=>"959a01a1cdb47773daa63fac45ae6d0858d160a8", "_method"=>"put", "action"=>"update", "id"=>"19", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000520)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 19) [0m
+  [4;35;1mPlan Update (0.000345)[0m   [0mUPDATE plans SET "created_at" = '2008-12-28 00:51:12', "start" = '2009-01-01 06:00:00', "flag" = 'f', "content" = '神田明神お参り', "updated_at" = '2008-12-28 01:09:17' WHERE "id" = 19[0m
+Redirected to http://yuiseki.net:3000/plan
+Completed in 0.13589 (7 reqs/sec) | DB: 0.00086 (0%) | 302 Found [http://yuiseki.net/plans/19]
+
+
+Processing ApplicationController#index (for 122.16.148.55 at 2008-12-28 01:09:17) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiNQbGFuIHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRlZC4G%0AOgpAdXNlZHsGOwdU--0edd862b8b3fb055a30fae19718767b87403c146
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/plan" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1441:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1424:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:09:27) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"19", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000497)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 19) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01409 (70 reqs/sec) | Rendering: 0.00493 (34%) | DB: 0.00050 (3%) | 200 OK [http://yuiseki.net/plans/19/edit]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:09:29) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"19", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000479)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 19) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01428 (70 reqs/sec) | Rendering: 0.00523 (36%) | DB: 0.00048 (3%) | 200 OK [http://yuiseki.net/plans/19/edit]
+
+
+Processing PlansController#update (for 122.16.148.55 at 2008-12-28 01:09:30) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"commit"=>"Update", "plan"=>{"start(1i)"=>"2009", "start(2i)"=>"1", "flag"=>"0", "start(3i)"=>"1", "content"=>"神田明神お参り", "start(4i)"=>"06", "start(5i)"=>"00"}, "authenticity_token"=>"959a01a1cdb47773daa63fac45ae6d0858d160a8", "_method"=>"put", "action"=>"update", "id"=>"19", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000456)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 19) [0m
+  [4;35;1mPlan Update (0.000340)[0m   [0mUPDATE plans SET "created_at" = '2008-12-28 00:51:12', "start" = '2009-01-01 06:00:00', "flag" = 'f', "content" = '神田明神お参り', "updated_at" = '2008-12-28 01:09:30' WHERE "id" = 19[0m
+Redirected to http://yuiseki.net:3000/plans
+Completed in 0.11698 (8 reqs/sec) | DB: 0.00080 (0%) | 302 Found [http://yuiseki.net/plans/19]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:09:30) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiNQbGFuIHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRlZC4G%0AOgpAdXNlZHsGOwdU--0edd862b8b3fb055a30fae19718767b87403c146
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005664)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02080 (48 reqs/sec) | Rendering: 0.00656 (31%) | DB: 0.00566 (27%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:10:31) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000451)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01388 (72 reqs/sec) | Rendering: 0.00515 (37%) | DB: 0.00045 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:11:02) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000561)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01538 (65 reqs/sec) | Rendering: 0.00597 (38%) | DB: 0.00056 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:11:03) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000501)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01432 (69 reqs/sec) | Rendering: 0.00518 (36%) | DB: 0.00050 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:11:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000494)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01453 (68 reqs/sec) | Rendering: 0.00555 (38%) | DB: 0.00049 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:14:04) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000455)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+
+
+ActionView::TemplateError (undefined method `start' for #<ActionView::Helpers::FormBuilder:0xb5871fbc>) on line #13 of plans/edit.html.erb:
+10: 
+11:   <p>
+12:     <b>時刻</b><br />
+13:     <%= f.start %>
+14:   </p>
+15: 
+16:     <%= f.submit "Update" %>
+
+    app/views/plans/edit.html.erb:13:in `_run_erb_47app47views47plans47edit46html46erb'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/helpers/form_helper.rb:248:in `fields_for'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/helpers/form_helper.rb:184:in `form_for'
+    app/views/plans/edit.html.erb:5:in `_run_erb_47app47views47plans47edit46html46erb'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:262:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1153:in `default_render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1159:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:14:14) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000464)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01470 (68 reqs/sec) | Rendering: 0.00593 (40%) | DB: 0.00046 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:17:37) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000450)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01321 (75 reqs/sec) | Rendering: 0.00444 (33%) | DB: 0.00045 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:17:38) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000457)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01322 (75 reqs/sec) | Rendering: 0.00443 (33%) | DB: 0.00046 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:17:39) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000446)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01318 (75 reqs/sec) | Rendering: 0.00443 (33%) | DB: 0.00045 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:17:40) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000521)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01461 (68 reqs/sec) | Rendering: 0.00469 (32%) | DB: 0.00052 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:17:40) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000502)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01380 (72 reqs/sec) | Rendering: 0.00459 (33%) | DB: 0.00050 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:17:44) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000483)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01348 (74 reqs/sec) | Rendering: 0.00450 (33%) | DB: 0.00048 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:17:49) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000458)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01489 (67 reqs/sec) | Rendering: 0.00556 (37%) | DB: 0.00046 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:18:04) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000451)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01300 (76 reqs/sec) | Rendering: 0.00422 (32%) | DB: 0.00045 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:18:50) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000449)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01301 (76 reqs/sec) | Rendering: 0.00427 (32%) | DB: 0.00045 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:19:03) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000515)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01399 (71 reqs/sec) | Rendering: 0.00450 (32%) | DB: 0.00051 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#update (for 122.16.148.55 at 2008-12-28 01:19:17) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"commit"=>"Update", "plan"=>{"content"=>"未定"}, "authenticity_token"=>"959a01a1cdb47773daa63fac45ae6d0858d160a8", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000505)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+  [4;36;1mPlan Update (0.000335)[0m   [0;1mUPDATE plans SET "created_at" = '2008-12-28 00:20:50', "start" = '2008-12-31 12:00:00', "flag" = 'f', "content" = '未定', "updated_at" = '2008-12-28 01:19:17' WHERE "id" = 1[0m
+Redirected to http://yuiseki.net:3000/plans
+Completed in 0.18610 (5 reqs/sec) | DB: 0.00084 (0%) | 302 Found [http://yuiseki.net/plans/1]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:19:17) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiNQbGFuIHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRlZC4G%0AOgpAdXNlZHsGOwdU--0edd862b8b3fb055a30fae19718767b87403c146
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005653)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02107 (47 reqs/sec) | Rendering: 0.00660 (31%) | DB: 0.00565 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:20:05) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005638)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02190 (45 reqs/sec) | Rendering: 0.00758 (34%) | DB: 0.00564 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:20:39) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005634)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02178 (45 reqs/sec) | Rendering: 0.00755 (34%) | DB: 0.00563 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:20:57) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005638)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02225 (44 reqs/sec) | Rendering: 0.00760 (34%) | DB: 0.00564 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:21:12) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005824)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02301 (43 reqs/sec) | Rendering: 0.00796 (34%) | DB: 0.00582 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:21:17) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005758)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02250 (44 reqs/sec) | Rendering: 0.00786 (34%) | DB: 0.00576 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:21:18) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005669)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02152 (46 reqs/sec) | Rendering: 0.00670 (31%) | DB: 0.00567 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:21:35) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005921)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02271 (44 reqs/sec) | Rendering: 0.00812 (35%) | DB: 0.00592 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:21:36) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005668)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02089 (47 reqs/sec) | Rendering: 0.00662 (31%) | DB: 0.00567 (27%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:21:37) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005858)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02246 (44 reqs/sec) | Rendering: 0.00693 (30%) | DB: 0.00586 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:22:02) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005741)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02308 (43 reqs/sec) | Rendering: 0.00787 (34%) | DB: 0.00574 (24%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:22:14) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005715)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02265 (44 reqs/sec) | Rendering: 0.00817 (36%) | DB: 0.00572 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:22:31) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005627)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02197 (45 reqs/sec) | Rendering: 0.00764 (34%) | DB: 0.00563 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:23:06) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005656)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02190 (45 reqs/sec) | Rendering: 0.00762 (34%) | DB: 0.00566 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:23:06) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.006065)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02124 (47 reqs/sec) | Rendering: 0.00658 (30%) | DB: 0.00606 (28%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:23:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005881)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02235 (44 reqs/sec) | Rendering: 0.00729 (32%) | DB: 0.00588 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:23:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005793)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02208 (45 reqs/sec) | Rendering: 0.00694 (31%) | DB: 0.00579 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:23:08) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005693)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02159 (46 reqs/sec) | Rendering: 0.00670 (31%) | DB: 0.00569 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:25:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005645)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02196 (45 reqs/sec) | Rendering: 0.00768 (34%) | DB: 0.00565 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:25:34) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005635)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02195 (45 reqs/sec) | Rendering: 0.00770 (35%) | DB: 0.00564 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:25:35) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005854)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02202 (45 reqs/sec) | Rendering: 0.00689 (31%) | DB: 0.00585 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:25:44) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005808)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02322 (43 reqs/sec) | Rendering: 0.00839 (36%) | DB: 0.00581 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:25:45) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005759)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02122 (47 reqs/sec) | Rendering: 0.00665 (31%) | DB: 0.00576 (27%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:26:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005656)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02208 (45 reqs/sec) | Rendering: 0.00767 (34%) | DB: 0.00566 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:26:34) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005674)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02193 (45 reqs/sec) | Rendering: 0.00765 (34%) | DB: 0.00567 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:26:34) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005655)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02109 (47 reqs/sec) | Rendering: 0.00679 (32%) | DB: 0.00565 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:26:42) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.006303)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02350 (42 reqs/sec) | Rendering: 0.00801 (34%) | DB: 0.00630 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:26:43) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005764)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02158 (46 reqs/sec) | Rendering: 0.00690 (31%) | DB: 0.00576 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:26:49) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005682)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02276 (43 reqs/sec) | Rendering: 0.00820 (36%) | DB: 0.00568 (24%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:30:31) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.006110)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02242 (44 reqs/sec) | Rendering: 0.00768 (34%) | DB: 0.00611 (27%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:41:06) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005664)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02244 (44 reqs/sec) | Rendering: 0.00770 (34%) | DB: 0.00566 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:41:11) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000526)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01389 (71 reqs/sec) | Rendering: 0.00449 (32%) | DB: 0.00053 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#update (for 122.16.148.55 at 2008-12-28 01:41:12) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"commit"=>"Update", "plan"=>{"content"=>"未定"}, "authenticity_token"=>"959a01a1cdb47773daa63fac45ae6d0858d160a8", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000519)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+  [4;36;1mPlan Update (0.000338)[0m   [0;1mUPDATE plans SET "created_at" = '2008-12-28 00:20:50', "start" = '2008-12-31 12:00:00', "flag" = 'f', "content" = '未定', "updated_at" = '2008-12-28 01:41:12' WHERE "id" = 1[0m
+Redirected to http://yuiseki.net:3000/plans
+Completed in 0.17673 (5 reqs/sec) | DB: 0.00086 (0%) | 302 Found [http://yuiseki.net/plans/1]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:41:13) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiNQbGFuIHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRlZC4G%0AOgpAdXNlZHsGOwdU--0edd862b8b3fb055a30fae19718767b87403c146
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.018579)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.05528 (18 reqs/sec) | Rendering: 0.02755 (49%) | DB: 0.01858 (33%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:42:05) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000471)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01259 (79 reqs/sec) | Rendering: 0.00334 (26%) | DB: 0.00047 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:42:08) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.006119)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02166 (46 reqs/sec) | Rendering: 0.00666 (30%) | DB: 0.00612 (28%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:44:32) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005624)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02175 (45 reqs/sec) | Rendering: 0.00746 (34%) | DB: 0.00562 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:44:40) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005829)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02395 (41 reqs/sec) | Rendering: 0.00881 (36%) | DB: 0.00583 (24%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:46:15) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000504)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+
+
+ActionView::TemplateError (undefined method `check_field' for #<ActionView::Helpers::FormBuilder:0xb592e66c>) on line #12 of plans/edit.html.erb:
+9:   </p>
+10:   <p>
+11:     <b>固定する</b><br />
+12:     <%= f.check_field :content %>
+13:   </p>
+14: 
+15:     <%= f.submit "Update" %>
+
+    app/views/plans/edit.html.erb:12:in `_run_erb_47app47views47plans47edit46html46erb'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/helpers/form_helper.rb:248:in `fields_for'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/helpers/form_helper.rb:184:in `form_for'
+    app/views/plans/edit.html.erb:5:in `_run_erb_47app47views47plans47edit46html46erb'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:262:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1153:in `default_render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1159:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:46:24) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000525)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+
+
+ActionView::TemplateError (undefined method `box_field' for #<ActionView::Helpers::FormBuilder:0xb59c3eb0>) on line #12 of plans/edit.html.erb:
+9:   </p>
+10:   <p>
+11:     <b>固定する</b><br />
+12:     <%= f.box_field :content %>
+13:   </p>
+14: 
+15:     <%= f.submit "Update" %>
+
+    app/views/plans/edit.html.erb:12:in `_run_erb_47app47views47plans47edit46html46erb'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/helpers/form_helper.rb:248:in `fields_for'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/helpers/form_helper.rb:184:in `form_for'
+    app/views/plans/edit.html.erb:5:in `_run_erb_47app47views47plans47edit46html46erb'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:262:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1153:in `default_render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1159:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:47:22) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000468)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01335 (74 reqs/sec) | Rendering: 0.00455 (34%) | DB: 0.00047 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:47:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005637)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.09297 (10 reqs/sec) | Rendering: 0.00837 (8%) | DB: 0.00564 (6%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:47:29) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"12", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000516)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 12) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01301 (76 reqs/sec) | Rendering: 0.00366 (28%) | DB: 0.00052 (3%) | 200 OK [http://yuiseki.net/plans/12/edit]
+
+
+Processing PlansController#update (for 122.16.148.55 at 2008-12-28 01:47:31) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"commit"=>"Update", "plan"=>{"content"=>"渋谷スクランブル交差点に向かう"}, "authenticity_token"=>"959a01a1cdb47773daa63fac45ae6d0858d160a8", "_method"=>"put", "action"=>"update", "id"=>"12", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000509)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 12) [0m
+  [4;36;1mPlan Update (0.000339)[0m   [0;1mUPDATE plans SET "created_at" = '2008-12-28 00:51:11', "start" = '2008-12-31 23:00:00', "flag" = 'f', "content" = '渋谷スクランブル交差点に向かう', "updated_at" = '2008-12-28 01:47:31' WHERE "id" = 12[0m
+Redirected to http://yuiseki.net:3000/plans
+Completed in 0.11744 (8 reqs/sec) | DB: 0.00085 (0%) | 302 Found [http://yuiseki.net/plans/12]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:47:31) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiNQbGFuIHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRlZC4G%0AOgpAdXNlZHsGOwdU--0edd862b8b3fb055a30fae19718767b87403c146
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005721)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02200 (45 reqs/sec) | Rendering: 0.00754 (34%) | DB: 0.00572 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:47:39) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"19", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000454)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 19) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01231 (81 reqs/sec) | Rendering: 0.00350 (28%) | DB: 0.00045 (3%) | 200 OK [http://yuiseki.net/plans/19/edit]
+
+
+Processing PlansController#update (for 122.16.148.55 at 2008-12-28 01:47:47) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"commit"=>"Update", "plan"=>{"content"=>"神田明神へお参りする"}, "authenticity_token"=>"959a01a1cdb47773daa63fac45ae6d0858d160a8", "_method"=>"put", "action"=>"update", "id"=>"19", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000455)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 19) [0m
+  [4;36;1mPlan Update (0.000311)[0m   [0;1mUPDATE plans SET "created_at" = '2008-12-28 00:51:12', "start" = '2009-01-01 06:00:00', "flag" = 'f', "content" = '神田明神へお参りする', "updated_at" = '2008-12-28 01:47:47' WHERE "id" = 19[0m
+Redirected to http://yuiseki.net:3000/plans
+Completed in 0.11770 (8 reqs/sec) | DB: 0.00077 (0%) | 302 Found [http://yuiseki.net/plans/19]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:47:47) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiNQbGFuIHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRlZC4G%0AOgpAdXNlZHsGOwdU--0edd862b8b3fb055a30fae19718767b87403c146
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005612)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02144 (46 reqs/sec) | Rendering: 0.00726 (33%) | DB: 0.00561 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:48:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"12", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000530)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 12) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01425 (70 reqs/sec) | Rendering: 0.00487 (34%) | DB: 0.00053 (3%) | 200 OK [http://yuiseki.net/plans/12/edit]
+
+
+Processing PlansController#update (for 122.16.148.55 at 2008-12-28 01:48:11) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"commit"=>"Update", "plan"=>{"flag"=>"1", "content"=>"渋谷スクランブル交差点に向かう"}, "authenticity_token"=>"959a01a1cdb47773daa63fac45ae6d0858d160a8", "_method"=>"put", "action"=>"update", "id"=>"12", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000515)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 12) [0m
+  [4;36;1mPlan Update (0.000335)[0m   [0;1mUPDATE plans SET "created_at" = '2008-12-28 00:51:11', "start" = '2008-12-31 23:00:00', "flag" = 't', "content" = '渋谷スクランブル交差点に向かう', "updated_at" = '2008-12-28 01:48:11' WHERE "id" = 12[0m
+Redirected to http://yuiseki.net:3000/plans
+Completed in 0.12203 (8 reqs/sec) | DB: 0.00085 (0%) | 302 Found [http://yuiseki.net/plans/12]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:48:11) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiNQbGFuIHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRlZC4G%0AOgpAdXNlZHsGOwdU--0edd862b8b3fb055a30fae19718767b87403c146
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005769)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02246 (44 reqs/sec) | Rendering: 0.00786 (34%) | DB: 0.00577 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 01:48:17) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"19", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000470)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 19) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01283 (77 reqs/sec) | Rendering: 0.00352 (27%) | DB: 0.00047 (3%) | 200 OK [http://yuiseki.net/plans/19/edit]
+
+
+Processing PlansController#update (for 122.16.148.55 at 2008-12-28 01:48:28) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"commit"=>"Update", "plan"=>{"flag"=>"1", "content"=>"神田明神へお参りする"}, "authenticity_token"=>"959a01a1cdb47773daa63fac45ae6d0858d160a8", "_method"=>"put", "action"=>"update", "id"=>"19", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000471)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 19) [0m
+  [4;36;1mPlan Update (0.000310)[0m   [0;1mUPDATE plans SET "created_at" = '2008-12-28 00:51:12', "start" = '2009-01-01 06:00:00', "flag" = 't', "content" = '神田明神へお参りする', "updated_at" = '2008-12-28 01:48:28' WHERE "id" = 19[0m
+Redirected to http://yuiseki.net:3000/plans
+Completed in 0.16660 (6 reqs/sec) | DB: 0.00078 (0%) | 302 Found [http://yuiseki.net/plans/19]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:48:28) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiNQbGFuIHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRlZC4G%0AOgpAdXNlZHsGOwdU--0edd862b8b3fb055a30fae19718767b87403c146
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.011841)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.03295 (30 reqs/sec) | Rendering: 0.00820 (24%) | DB: 0.01184 (35%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:49:27) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005865)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02490 (40 reqs/sec) | Rendering: 0.00972 (39%) | DB: 0.00586 (23%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:49:43) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005746)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02450 (40 reqs/sec) | Rendering: 0.00919 (37%) | DB: 0.00575 (23%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:49:44) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005702)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02193 (45 reqs/sec) | Rendering: 0.00736 (33%) | DB: 0.00570 (25%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:51:09) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005661)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02154 (46 reqs/sec) | Rendering: 0.00726 (33%) | DB: 0.00566 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 01:54:13) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.006115)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02344 (42 reqs/sec) | Rendering: 0.00871 (37%) | DB: 0.00611 (26%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing Base#index (for 122.16.148.55 at 2008-12-28 02:06:15) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {}
+
+
+ArgumentError (wrong number of arguments (2 for 1)):
+    /config/routes.rb:3:in `root'
+    /config/routes.rb:3
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1250:in `draw'
+    /config/routes.rb:1
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1293:in `load_routes!'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1273:in `load!'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1288:in `reload'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:134:in `reload_application'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:178:in `send!'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:178:in `run_callbacks'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:175:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:175:in `send!'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:175:in `run_callbacks'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:114:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing Base#index (for 122.16.148.55 at 2008-12-28 02:06:21) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {}
+
+
+NoMethodError (undefined method `[]' for :plans:Symbol):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1308:in `add_named_route'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1074:in `named_route'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1070:in `root'
+    /config/routes.rb:3
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1250:in `draw'
+    /config/routes.rb:1
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1293:in `load_routes!'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1273:in `load!'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1288:in `reload'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:134:in `reload_application'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:178:in `send!'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:178:in `run_callbacks'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:175:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:175:in `send!'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:175:in `run_callbacks'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:114:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 02:07:06) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005646)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02358 (42 reqs/sec) | Rendering: 0.00878 (37%) | DB: 0.00565 (23%) | 200 OK [http://yuiseki.net/plans]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 02:09:27) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.006667)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02844 (35 reqs/sec) | Rendering: 0.01156 (40%) | DB: 0.00667 (23%) | 200 OK [http://yuiseki.net/]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 02:11:16) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005801)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02204 (45 reqs/sec) | Rendering: 0.00727 (33%) | DB: 0.00580 (26%) | 200 OK [http://yuiseki.net/]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 02:11:17) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000539)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01374 (72 reqs/sec) | Rendering: 0.00477 (34%) | DB: 0.00054 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#update (for 122.16.148.55 at 2008-12-28 02:11:19) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"commit"=>"Update", "plan"=>{"flag"=>"0", "content"=>"未定"}, "authenticity_token"=>"959a01a1cdb47773daa63fac45ae6d0858d160a8", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000445)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+  [4;36;1mPlan Update (0.000678)[0m   [0;1mUPDATE plans SET "created_at" = '2008-12-28 00:20:50', "start" = '2008-12-31 12:00:00', "flag" = 'f', "content" = '未定', "updated_at" = '2008-12-28 02:11:19' WHERE "id" = 1[0m
+
+
+NameError (undefined local variable or method `map' for #<PlansController:0xb695f338>):
+    /app/controllers/plans_controller.rb:21:in `update'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    /app/controllers/plans_controller.rb:18:in `update'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 02:11:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIhfkuojlrprmm7TmlrDlrozkuoYGOgpAdXNlZHsGOwdU--66da8f72a862640ed269fb07e0b4c1110f5a5d95
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000514)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01348 (74 reqs/sec) | Rendering: 0.00368 (27%) | DB: 0.00051 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#update (for 122.16.148.55 at 2008-12-28 02:11:27) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"commit"=>"Update", "plan"=>{"flag"=>"0", "content"=>"未定"}, "authenticity_token"=>"959a01a1cdb47773daa63fac45ae6d0858d160a8", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000500)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+  [4;35;1mPlan Update (0.000329)[0m   [0mUPDATE plans SET "created_at" = '2008-12-28 00:20:50', "start" = '2008-12-31 12:00:00', "flag" = 'f', "content" = '未定', "updated_at" = '2008-12-28 02:11:27' WHERE "id" = 1[0m
+
+
+NoMethodError (undefined method `symbol_url' for #<PlansController:0xb6a5a33c>):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/polymorphic_routes.rb:27:in `send!'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/polymorphic_routes.rb:27:in `polymorphic_url'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:618:in `url_for'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1060:in `redirect_to'
+    /app/controllers/plans_controller.rb:21:in `update'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    /app/controllers/plans_controller.rb:18:in `update'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PlansController#update (for 122.16.148.55 at 2008-12-28 02:12:21) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIhfkuojlrprmm7TmlrDlrozkuoYGOgpAdXNlZHsGOwdU--66da8f72a862640ed269fb07e0b4c1110f5a5d95
+  Parameters: {"commit"=>"Update", "plan"=>{"flag"=>"0", "content"=>"未定"}, "authenticity_token"=>"959a01a1cdb47773daa63fac45ae6d0858d160a8", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000445)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+  [4;35;1mPlan Update (0.000305)[0m   [0mUPDATE plans SET "created_at" = '2008-12-28 00:20:50', "start" = '2008-12-31 12:00:00', "flag" = 'f', "content" = '未定', "updated_at" = '2008-12-28 02:12:21' WHERE "id" = 1[0m
+
+
+NameError (undefined local variable or method `root' for #<PlansController:0xb698e8a4>):
+    /app/controllers/plans_controller.rb:21:in `update'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    /app/controllers/plans_controller.rb:18:in `update'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 02:12:27) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIhfkuojlrprmm7TmlrDlrozkuoYGOgpAdXNlZHsGOwdU--66da8f72a862640ed269fb07e0b4c1110f5a5d95
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000543)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01358 (73 reqs/sec) | Rendering: 0.00371 (27%) | DB: 0.00054 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 02:12:27) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005767)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02266 (44 reqs/sec) | Rendering: 0.00745 (32%) | DB: 0.00577 (25%) | 200 OK [http://yuiseki.net/]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 02:12:28) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005695)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02230 (44 reqs/sec) | Rendering: 0.00732 (32%) | DB: 0.00569 (25%) | 200 OK [http://yuiseki.net/]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 02:13:33) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000458)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01233 (81 reqs/sec) | Rendering: 0.00353 (28%) | DB: 0.00046 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#update (for 122.16.148.55 at 2008-12-28 02:13:37) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"commit"=>"Update", "plan"=>{"flag"=>"0", "content"=>"未定"}, "authenticity_token"=>"959a01a1cdb47773daa63fac45ae6d0858d160a8", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000892)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+  [4;35;1mPlan Update (0.000305)[0m   [0mUPDATE plans SET "created_at" = '2008-12-28 00:20:50', "start" = '2008-12-31 12:00:00', "flag" = 'f', "content" = '未定', "updated_at" = '2008-12-28 02:13:37' WHERE "id" = 1[0m
+Redirected to http://yuiseki.net:3000/
+Completed in 0.12297 (8 reqs/sec) | DB: 0.00120 (0%) | 302 Found [http://yuiseki.net/plans/1]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 02:13:37) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIhfkuojlrprmm7TmlrDlrozkuoYGOgpAdXNlZHsGOwdU--66da8f72a862640ed269fb07e0b4c1110f5a5d95
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.006112)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02198 (45 reqs/sec) | Rendering: 0.00719 (32%) | DB: 0.00611 (27%) | 200 OK [http://yuiseki.net/]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 02:15:48) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005940)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02356 (42 reqs/sec) | Rendering: 0.00802 (34%) | DB: 0.00594 (25%) | 200 OK [http://yuiseki.net/]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 02:16:46) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"37", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000509)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 37) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01327 (75 reqs/sec) | Rendering: 0.00408 (30%) | DB: 0.00051 (3%) | 200 OK [http://yuiseki.net/plans/37/edit]
+
+
+Processing PlansController#update (for 122.16.148.55 at 2008-12-28 02:16:52) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"commit"=>"Update", "plan"=>{"flag"=>"0", "content"=>"ああああああああああああああああああああああああああああああああああああああああああああああああああああああ"}, "authenticity_token"=>"959a01a1cdb47773daa63fac45ae6d0858d160a8", "_method"=>"put", "action"=>"update", "id"=>"37", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000482)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 37) [0m
+  [4;36;1mPlan Update (0.000317)[0m   [0;1mUPDATE plans SET "created_at" = '2008-12-28 00:51:13', "start" = '2009-01-02 00:00:00', "flag" = 'f', "content" = 'ああああああああああああああああああああああああああああああああああああああああああああああああああああああ', "updated_at" = '2008-12-28 02:16:52' WHERE "id" = 37[0m
+Redirected to http://yuiseki.net:3000/
+Completed in 0.11813 (8 reqs/sec) | DB: 0.00080 (0%) | 302 Found [http://yuiseki.net/plans/37]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 02:16:52) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIhfkuojlrprmm7TmlrDlrozkuoYGOgpAdXNlZHsGOwdU--66da8f72a862640ed269fb07e0b4c1110f5a5d95
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005672)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02164 (46 reqs/sec) | Rendering: 0.00721 (33%) | DB: 0.00567 (26%) | 200 OK [http://yuiseki.net/]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 02:17:24) [GET]
+  Session ID: 3fb9b7485202b62509d367ae14af3868
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005674)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02143 (46 reqs/sec) | Rendering: 0.00722 (33%) | DB: 0.00567 (26%) | 200 OK [http://yuiseki.net/]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 02:17:45) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--4b56d11e9e294eeb260ef566ead5e13a7053ca38
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000447)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01275 (78 reqs/sec) | Rendering: 0.00356 (27%) | DB: 0.00045 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 02:18:09) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.006067)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.17211 (5 reqs/sec) | Rendering: 0.00941 (5%) | DB: 0.00607 (3%) | 200 OK [http://yuiseki.net/]
+
+
+Processing PlansController#index (for 221.170.62.231 at 2008-12-28 02:18:09) [GET]
+  Session ID: fa20fd31b54175159d8d3c2902bcd091
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005803)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02211 (45 reqs/sec) | Rendering: 0.00750 (33%) | DB: 0.00580 (26%) | 200 OK [http://yuiseki.net/]
+
+
+Processing PlansController#edit (for 221.170.62.231 at 2008-12-28 02:18:22) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--4b56d11e9e294eeb260ef566ead5e13a7053ca38
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000500)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01268 (78 reqs/sec) | Rendering: 0.00360 (28%) | DB: 0.00050 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#index (for 61.204.194.122 at 2008-12-28 02:18:23) [GET]
+  Session ID: 53a6bcffe180da572bd823d07b97bee9
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005716)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02173 (46 reqs/sec) | Rendering: 0.00732 (33%) | DB: 0.00572 (26%) | 200 OK [http://yuiseki.net/]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 02:18:33) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005696)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02374 (42 reqs/sec) | Rendering: 0.00889 (37%) | DB: 0.00570 (23%) | 200 OK [http://yuiseki.net/]
+
+
+Processing PlansController#index (for 59.106.108.66 at 2008-12-28 02:18:39) [GET]
+  Session ID: 03fa0c6f80ffbf4d1f963da7f92c0f90
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005712)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02187 (45 reqs/sec) | Rendering: 0.00723 (33%) | DB: 0.00571 (26%) | 200 OK [http://yuiseki.net/]
+
+
+Processing PlansController#index (for 59.106.108.66 at 2008-12-28 02:18:47) [GET]
+  Session ID: efe5e0f81b81b40e259d1c947da31c89
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.006051)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.09647 (10 reqs/sec) | Rendering: 0.00769 (7%) | DB: 0.00605 (6%) | 200 OK [http://yuiseki.net/]
+
+
+Processing PlansController#index (for 59.106.108.66 at 2008-12-28 02:18:51) [GET]
+  Session ID: 44f42399bb2f069542fc92de093bdd4b
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005761)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02211 (45 reqs/sec) | Rendering: 0.00749 (33%) | DB: 0.00576 (26%) | 200 OK [http://yuiseki.net/]
+
+
+Processing PlansController#index (for 59.106.108.66 at 2008-12-28 02:18:54) [GET]
+  Session ID: fb8f51253446463e66e8e05d7f69a980
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.006202)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02238 (44 reqs/sec) | Rendering: 0.00740 (33%) | DB: 0.00620 (27%) | 200 OK [http://yuiseki.net/]
+
+
+Processing PlansController#index (for 59.106.108.66 at 2008-12-28 02:18:54) [GET]
+  Session ID: 93d51657f60033a426689c982b858b53
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.006152)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02188 (45 reqs/sec) | Rendering: 0.00726 (33%) | DB: 0.00615 (28%) | 200 OK [http://yuiseki.net/]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 02:19:11) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000446)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01229 (81 reqs/sec) | Rendering: 0.00350 (28%) | DB: 0.00045 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 02:19:12) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005673)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02204 (45 reqs/sec) | Rendering: 0.00769 (34%) | DB: 0.00567 (25%) | 200 OK [http://yuiseki.net/]
+
+
+Processing PlansController#edit (for 122.16.148.55 at 2008-12-28 02:19:29) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.000452)[0m   [0;1mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 0.01229 (81 reqs/sec) | Rendering: 0.00350 (28%) | DB: 0.00045 (3%) | 200 OK [http://yuiseki.net/plans/1/edit]
+
+
+Processing PlansController#update (for 122.16.148.55 at 2008-12-28 02:19:33) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"commit"=>"Update", "plan"=>{"flag"=>"0", "content"=>"ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ"}, "authenticity_token"=>"959a01a1cdb47773daa63fac45ae6d0858d160a8", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.000549)[0m   [0mSELECT * FROM plans WHERE (plans."id" = 1) [0m
+  [4;36;1mPlan Update (0.000404)[0m   [0;1mUPDATE plans SET "created_at" = '2008-12-28 00:20:50', "start" = '2008-12-31 12:00:00', "flag" = 'f', "content" = 'ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ', "updated_at" = '2008-12-28 02:19:33' WHERE "id" = 1[0m
+Redirected to http://yuiseki.net:3000/
+Completed in 0.11483 (8 reqs/sec) | DB: 0.00095 (0%) | 302 Found [http://yuiseki.net/plans/1]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 02:19:34) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIhfkuojlrprmm7TmlrDlrozkuoYGOgpAdXNlZHsGOwdU--66da8f72a862640ed269fb07e0b4c1110f5a5d95
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005800)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02268 (44 reqs/sec) | Rendering: 0.00748 (32%) | DB: 0.00580 (25%) | 200 OK [http://yuiseki.net/]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 02:20:09) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.006133)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02390 (41 reqs/sec) | Rendering: 0.00902 (37%) | DB: 0.00613 (25%) | 200 OK [http://yuiseki.net/]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 02:20:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005647)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02377 (42 reqs/sec) | Rendering: 0.00943 (39%) | DB: 0.00565 (23%) | 200 OK [http://yuiseki.net/]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 02:20:30) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMDgyYmI3YjYwZmEyMzBiOTM0YWQzM2IwMGFmMjUy%0AODciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--4f51cdb9753647d082043e9eec32a5ed810b11f5
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;36;1mPlan Load (0.005683)[0m   [0;1mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.02192 (45 reqs/sec) | Rendering: 0.00767 (34%) | DB: 0.00568 (25%) | 200 OK [http://yuiseki.net/]
+
+
+Processing PlansController#index (for 122.16.148.55 at 2008-12-28 02:24:06) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTM5OWFhNDZmMjM3MGZkZGQ2MjIxMDJmODVmMTg3%0AZWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--844a20f4c694e5df21cd4b8dcff8df262e24d708
+  Parameters: {"action"=>"index", "controller"=>"plans"}
+  [4;35;1mPlan Load (0.005697)[0m   [0mSELECT * FROM plans [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 0.09544 (10 reqs/sec) | Rendering: 0.08114 (85%) | DB: 0.00570 (5%) | 200 OK [http://yuiseki.net/]
+
+
+Processing Base#index (for 119.63.193.63 at 2008-12-28 03:10:16) [GET]
+  Session ID: edf69b365abf80291f1ffdde6a0f2c9c
+  Parameters: {}
+
+
+Errno::ENOENT (No such file or directory - /home/yuiseki/svn/adhoc/config/routes.rb):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1282:in `stat'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1282:in `reload'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:134:in `reload_application'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:178:in `send!'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:178:in `run_callbacks'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:175:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:175:in `send!'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:175:in `run_callbacks'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:114:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)

@@ -1,0 +1,19 @@
+<h1><%= @plan.start.strftime("%d日 %H:%M～") %></h1>
+
+<%= error_messages_for :plan %>
+
+<% form_for(@plan) do |f| %>
+  <p>
+    <b>予定</b><br />
+    <%= f.text_field :content %>
+  </p>
+  <p>
+    <b>固定する</b><br />
+    <%= f.check_box :flag %>
+  </p>
+
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', plans_path %>
