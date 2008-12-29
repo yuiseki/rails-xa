@@ -1,6 +1,7 @@
 class PlansController < ApplicationController
   def index
-    @plans = Plan.find(:all)
+    now_time = Time.now-60*60
+    @plans = Plan.find(:all, :order => "start", :conditions => ["start >= ?",now_time])
 
     respond_to do |format|
       format.html # index.html.erb

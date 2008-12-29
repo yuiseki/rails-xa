@@ -1,5 +1,23 @@
 <h1 style="font-size:4em;">エクストリームアドホック忘年会</h1>
-<h2><%= Time.now.strftime("%d日 %H:%M") %></h2>
+<h2>現在 <%= Time.now.strftime("%d日 %H:%M") %></h2>
+<div>
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="400" height="320" id="utv652264">
+    <param name="flashvars" value="viewcount=true&amp;autoplay=false&amp;brand=embed"/>
+    <param name="allowfullscreen" value="true"/>
+    <param name="allowscriptaccess" value="always"/>
+    <param name="movie" value="http://www.ustream.tv/flash/live/1/28719"/>
+    <embed flashvars="viewcount=true&amp;autoplay=false&amp;brand=embed" width="200" height="160" allowfullscreen="true" allowscriptaccess="always" id="utv652264" name="utv_n_396563" src="http://www.ustream.tv/flash/live/1/28719" type="application/x-shockwave-flash" />
+  </object>
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="400" height="320" id="utv107657">
+    <param name="flashvars" value="viewcount=true&amp;autoplay=false&amp;brand=embed"/>
+    <param name="allowfullscreen" value="true"/>
+    <param name="allowscriptaccess" value="always"/>
+    <param name="movie" value="http://www.ustream.tv/flash/live/1/69676"/>
+    <embed flashvars="viewcount=true&amp;autoplay=false&amp;brand=embed" width="200" height="160" allowfullscreen="true" allowscriptaccess="always" id="utv107657" name="utv_n_786616" src="http://www.ustream.tv/flash/live/1/69676" type="application/x-shockwave-flash" />
+  </object>
+</div>
+
+<hr />
 
 <table>
   <tr>
@@ -9,12 +27,12 @@
 <% for plan in @plans %>
   <tr>
     <% unless plan.flag? %>
-      <td style="font-size:1.6em;padding:10px;border-bottom:1px solid black;"><%=h plan.start.strftime("%d日 %H:%M～") %></td>
-      <td style="max-width:120px;font-size:1.6em;padding:10px;border-bottom:1px solid black;"><%=h plan.content %></td>
+    <td style="font-size:1.6em;padding:10px;border-bottom:1px solid black;"><%=h plan.start.strftime("%d日 %H:%M～") %><%= " now!" if Time.now.strftime("%d%H") == plan.start.strftime("%d%H") %></td>
+      <td style="max-width:420px;font-size:1.6em;padding:10px;border-bottom:1px solid black;"><%=h plan.content %></td>
       <td><%= link_to '編集', edit_plan_path(plan) %></td>
     <% else %>
       <td style="font-size:1.6em;padding:10px;border-bottom:1px solid black;color:red;"><%=h plan.start.strftime("%d日 %H:%M～") %></td>
-      <td style="font-size:1.6em;padding:10px;border-bottom:1px solid black;color:red;"><%=h plan.content %></td>
+      <td style="max-width:420px;font-size:1.6em;padding:10px;border-bottom:1px solid black;color:red;"><%=h plan.content %></td>
     <% end %>
   </tr>
 <% end %>
