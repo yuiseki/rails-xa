@@ -1,7 +1,7 @@
 <h1 style="font-size:4em;">エクストリームアドホック忘年会</h1>
 <h2>現在 <%= Time.now.strftime("%d日 %H:%M") %></h2>
 <div class="ustream">
-  <% for user in @accounts %>
+  <% for user in Status::ACCOUNTS %>
     <embed flashvars='viewcount=true&amp;autoplay=false&amp;brand=embed' width='160' height='130' allowfullscreen='true' allowscriptaccess='always'
     src='http://www.ustream.tv/flash/live/1/<%= user[:ustream] %>' type='application/x-shockwave-flash' />
   <% end %>
