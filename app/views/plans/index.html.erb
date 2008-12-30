@@ -4,28 +4,18 @@
 
 <table>
   <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <% Status::ACCOUNTS.each do |account| %>
-    <th>
-    <embed flashvars='viewcount=true&amp;autoplay=false&amp;brand=embed' width='160' height='130' allowfullscreen='true' allowscriptaccess='always'
-    src='http://www.ustream.tv/flash/live/1/<%= account[:ustream] %>' type='application/x-shockwave-flash' />
-    </th>
-    <% end %>
-  </tr>
-  <tr>
-    <th>時間帯</th>
-    <th>予定</th>
+    <th style="font-size:2em;">時間帯</th>
+    <th style="font-size:2em;">予定</th>
     <th></th>
     <th></th>
     <% Status::ACCOUNTS.each do |account| %>
     <th>
+      <embed flashvars='viewcount=true&amp;autoplay=false&amp;brand=embed' width='160' height='130' allowfullscreen='true' allowscriptaccess='always'
+      src='http://www.ustream.tv/flash/live/1/<%= account[:ustream] %>' type='application/x-shockwave-flash' />
       <a href="<%=h account[:twitter] %>">
-      <img src="http://usericons.relucks.org/twitter/<%=h account[:twitter] %>" height="30" width="30"  />
-      <%=h account[:twitter] %>
-    </a>
+        <img src="http://usericons.relucks.org/twitter/<%=h account[:twitter] %>" height="30" width="30"  />
+        <%=h account[:twitter] %>
+      </a>
     </th>
     <% end %>
   </tr>
