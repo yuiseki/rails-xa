@@ -1,5 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.root :controller=> "plans"
+  map.connect '/all', :controller=>"plans", :action=>"all"
+  map.connect ':controller/:action'
   map.resources :plans
 
   # The priority is based upon order of creation: first created -> highest priority.
