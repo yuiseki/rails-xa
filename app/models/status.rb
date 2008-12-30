@@ -14,11 +14,21 @@ class Status < ActiveRecord::Base
     {:twitter => "voqn", :ustream => 62213},
   ]
 
+  def self.hour(time)
+    statuses = Status.find(:all,
+                :order => "status_created_at",
+                :conditions => ["status_created_at BETWEEN ? and ?",
+                                time-1.hours, time ]
+                )
+    return statuses
+  end
+
   def self.get_xml
     ACCOUNTS.each do |accounts|
       get_xml_page(accounts[:twitter], 1)
     end
   end
+
   def self.get_xml_page(user, page)
     xml = open("http://twitter.com/statuses/user_timeline/#{user}.xml?page=#{page}").read
     doc = REXML::Document.new xml

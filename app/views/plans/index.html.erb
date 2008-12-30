@@ -1,4 +1,17 @@
 <h2>現在 <%= Time.now.strftime("%d日 %H:%M") %></h2>
+    <% Status::ACCOUNTS.each do |account| %>
+      <embed flashvars='viewcount=true&amp;autoplay=false&amp;brand=embed' width='160' height='130' allowfullscreen='true' allowscriptaccess='always'
+      src='http://www.ustream.tv/flash/live/1/<%= account[:ustream] %>' type='application/x-shockwave-flash' />
+    <% end %>
+
+      <br />
+      <br />
+    <h2><%= Time.now-1.hours %>から<%= Time.now %>の発言</h2>
+    <% Status.hour(Time.now).each do |tw| %>
+      <img src="http://usericons.relucks.org/twitter/<%= tw.user_screen_name %>"  height="30" width="30"  />
+      <%= tw.status_text %>
+      <br />
+    <% end %>
 
 <hr />
 
@@ -10,9 +23,7 @@
     <th></th>
     <% Status::ACCOUNTS.each do |account| %>
     <th>
-      <embed flashvars='viewcount=true&amp;autoplay=false&amp;brand=embed' width='160' height='130' allowfullscreen='true' allowscriptaccess='always'
-      src='http://www.ustream.tv/flash/live/1/<%= account[:ustream] %>' type='application/x-shockwave-flash' />
-      <a href="<%=h account[:twitter] %>">
+      <a href="http://twitter.com/<%=h account[:twitter] %>">
         <img src="http://usericons.relucks.org/twitter/<%=h account[:twitter] %>" height="30" width="30"  />
         <%=h account[:twitter] %>
       </a>
