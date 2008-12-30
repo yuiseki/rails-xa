@@ -1,15 +1,15 @@
 <p>
-  <b>Content:</b>
+  <b>予定</b><br />
   <%=h @plan.content %>
 </p>
 
 <p>
   <b>Start:</b>
-  <%=h @plan.start %>
+  <%= @plan.start.strftime("%d日 %H:%M～") %>
 </p>
 
 <p>
-  <b>Flag:</b>
+  <b>固定する</b><br />
   <%=h @plan.flag %>
 </p>
 

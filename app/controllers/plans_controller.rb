@@ -41,14 +41,13 @@ class PlansController < ApplicationController
     end
   end
 
-  #def show
-  #  @plan = Plan.find(params[:id])
-#
-  #  respond_to do |format|
-  #    format.html # show.html.erb
-  #    format.xml  { render :xml => @plan }
-  #  end
-  #end
+  def show
+    @plan = Plan.find(params[:id])
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @plan }
+    end
+  end
 
   #def new
   #  @plan = Plan.new

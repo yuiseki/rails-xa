@@ -1,4 +1,4 @@
-require 'feed-normalizer'
+#require 'feed-normalizer'
 require 'uri'
 require 'open-uri'
 
