@@ -4,44 +4,57 @@ require 'uri'
 require 'open-uri'
 
 module PlansHelper
+  ROWSPAN = 6
+  LOCK_IMG_URL = 'http://assets0.twitter.com/images/icon_lock_sidebar.gif'
   def td(plan, i)
-    string=""
+    string = ''
+    if (plan.start + 10.minute * (i+1)) < Time.now
+      string += "<td class=\"past\">"
+      string += start_to_string(plan.start, i)
+      string += "</td>"
 
-    if Time.now < (plan.start + 10.minute * i)
-      string += '<td class="past">'
-        string += start_to_string(plan.start, i)
-    elsif (plan.start + 10.minute * (i+1)) < Time.now
-      string += '<td class="future">'
-        string += start_to_string(plan.start, i)
-    else
-      string += '<td class="now">'
-        string += start_to_string(plan.start, i)
-      string += 'now!'
-    end
-    string += "</td>"
-
-    if not plan.flag? and i == 0
-      editable_time = Time.now+60*60
-      if plan.start > editable_time
-        string += "<td style=\"width:420px;font-size:1.6em;padding:10px;border-bottom:1px solid black;\">"
+      if i == 0
+        string += "<td class=\"plan-past\" rowspan=\"#{ROWSPAN}\">"
         string += plan.content
         string += "</td>"
-        string += "<td>#{ link_to '編集', edit_plan_path(plan)}</td>"
-        string += "<td>#{ link_to '表示', plan_path(plan)}</td>"
-      else
-        string += "<td style=\"width:420px;font-size:1.6em;padding:10px;border-bottom:1px solid black;\">"
+
+        string += "<td rowspan=\"#{ROWSPAN}\"><img src=\"#{LOCK_IMG_URL}\"></td>"
+        string += "<td rowspan=\"#{ROWSPAN}\"></td>"
+      end
+    elsif Time.now < (plan.start + 10.minute * i)
+      string += "<td class=\"future\">"
+      string += start_to_string(plan.start, i)
+      string += "</td>"
+
+      if i == 0
+        string += "<td class=\"plan-future\" rowspan=\"#{ROWSPAN}\">"
         string += plan.content
         string += "</td>"
-        string += "<td><img src=\"http://assets0.twitter.com/images/icon_lock_sidebar.gif\"></td>"
-        string += "<td></td>"
+
+        unless plan.flag
+          string += "<td rowspan=\"#{ROWSPAN}\">#{ link_to '編集', edit_plan_path(plan)}</td>"
+          string += "<td rowspan=\"#{ROWSPAN}\">#{ link_to '表示', plan_path(plan)}</td>"
+        else
+          string += "<td rowspan=\"#{ROWSPAN}\"><img src=\"#{LOCK_IMG_URL}\"></td>"
+          string += "<td rowspan=\"#{ROWSPAN}\"></td>"
+        end
       end
     else
-      string += "<td style=\"width:420px;font-size:1.6em;padding:10px;border-bottom:1px solid black;\">"
-      string += plan.content
+      string += "<td class=\"now\">"
+      string += start_to_string(plan.start, i)
+      string += 'now!'
       string += "</td>"
-      string += "<td><img src=\"http://assets0.twitter.com/images/icon_lock_sidebar.gif\"></td>"
-      string += "<td></td>"
+
+      if i == 0
+        string += "<td class=\"plan-now\" rowspan=\"#{ROWSPAN}\">"
+        string += plan.content
+        string += "</td>"
+
+        string += "<td rowspan=\"#{ROWSPAN}\"><img src=\"#{LOCK_IMG_URL}\"></td>"
+        string += "<td rowspan=\"#{ROWSPAN}\"></td>"
+      end
     end
+    return string
   end
   private
   def start_to_string(start, i)

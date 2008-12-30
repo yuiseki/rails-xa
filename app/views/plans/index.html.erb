@@ -24,6 +24,8 @@
     <% Status::ACCOUNTS.each do |account| %>
     <th>
       <a href="http://twitter.com/<%=h account[:twitter] %>">
+      <br/>
+      <a href="<%=h account[:twitter] %>">
         <img src="http://usericons.relucks.org/twitter/<%=h account[:twitter] %>" height="30" width="30"  />
         <%=h account[:twitter] %>
       </a>
