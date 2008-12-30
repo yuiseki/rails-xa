@@ -10,9 +10,9 @@ module PlansHelper
     uri = "http://twitter.com/statuses/user_timeline/#{user}.atom"
     feed = FeedNormalizer::FeedNormalizer.parse open(uri)
   end
-  def td(plan)
+  def td(plan, i)
     string=""
-    unless plan.flag?
+    if not plan.flag? and i == 0
       editable_time = Time.now+60*60
       if plan.start > editable_time
         string += "<td style=\"font-size:1.6em;padding:10px;border-bottom:1px solid black;\">"
@@ -43,6 +43,7 @@ module PlansHelper
       string += plan.content
       string += "</td>"
       string += "<td><img src=\"http://assets0.twitter.com/images/icon_lock_sidebar.gif\"></td>"
+      string += "<td></td>"
     end
   end
 end
