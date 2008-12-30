@@ -98,21 +98,41 @@ background-color: #bbccdd
 }
 
 td.past {
-    font-size:1.6em;
+//    font-size:1.6em;
     padding:10px;
     border-bottom:1px solid black;
     color:#ccc;
 }
 td.now {
-    font-size:1.6em;
+//    font-size:1.6em;
     padding:10px;
     border-bottom:1px solid black;
     color:#f00;
 }
 td.future {
-    font-size:1.6em;
+//    font-size:1.6em;
     padding:10px;
     border-bottom:1px solid black;
     color:#000;
 }
 
+td.plan-past {
+    width:420px;
+//    font-size:1.6em;
+    padding:10px;
+    border-bottom:1px solid black;
+}
+
+td.plan-now {
+    width:420px;
+//    font-size:1.6em;
+    padding:10px;
+    border-bottom:1px solid black;
+}
+
+td.plan-future {
+    width:420px;
+//    font-size:1.6em;
+    padding:10px;
+    border-bottom:1px solid black;
+}
