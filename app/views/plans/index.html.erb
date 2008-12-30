@@ -16,14 +16,7 @@
   </tr>
 <% for plan in @plans %>
   <tr>
-    <% unless plan.flag? %>
-    <td style="font-size:1.6em;padding:10px;border-bottom:1px solid black;"><%=h plan.start.strftime("%d日 %H:%M～") %><%= " now!" if Time.now.strftime("%d%H") == plan.start.strftime("%d%H") %></td>
-      <td style="width:420px;font-size:1.6em;padding:10px;border-bottom:1px solid black;"><%=h plan.content %></td>
-      <td><%= link_to '編集', edit_plan_path(plan) %></td>
-    <% else %>
-      <td style="font-size:1.6em;padding:10px;border-bottom:1px solid black;color:red;"><%=h plan.start.strftime("%d日 %H:%M～") %></td>
-      <td style="width:420px;font-size:1.6em;padding:10px;border-bottom:1px solid black;color:red;"><%=h plan.content %></td>
-    <% end %>
+    <%= td(plan) %>
   </tr>
 <% end %>
 </table>
