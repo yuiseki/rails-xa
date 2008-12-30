@@ -12,9 +12,9 @@
 ActiveRecord::Schema.define(:version => 1) do
 
   create_table "plans", :force => true do |t|
-    t.string   "content",    :default => "NULL"
+    t.string   "content"
     t.datetime "start"
-    t.boolean  "flag",       :default => false
+    t.boolean  "flag"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
