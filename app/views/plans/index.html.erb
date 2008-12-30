@@ -12,10 +12,23 @@
   <tr>
     <th>時間帯</th>
     <th>予定</th>
+    <th></th>
+    <th></th>
+    <% Status::ACCOUNTS.each do |account| %>
+    <th><%=h account[:twitter] %></th>
+    <% end %>
   </tr>
 <% for plan in @plans %>
   <tr>
     <%= td(plan) %>
+    <% Status::ACCOUNTS.each do |account| %>
+    <td class="<%=h account[:twitter] %>">
+      <% Status.find(:all, :conditions => ["user_screen_name = ? AND ? <= status_created_at AND status_created_at <= ?", account[:twitter], plan.start, plan.start + 1.hour]).each do |status| %>
+      [<%=h status.status_created_at.strftime("%H:%M") %>]<br/>
+      <%=h status.status_text %><br/>
+      <% end %>
+    </td>
+    <% end %>
   </tr>
 <% end %>
 </table>
