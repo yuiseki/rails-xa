@@ -1,4 +1,14 @@
+require 'feed-normalizer'
+require 'uri'
+require 'open-uri'
+
 module PlansHelper
+  def ustream
+  end
+  def twitter
+    uri = "http://twitter.com/statuses/user_timeline/#{user}.atom"
+    feed = FeedNormalizer::FeedNormalizer.parse open(uri)
+  end
   def td(plan)
     string=""
     unless plan.flag?
@@ -15,7 +25,7 @@ module PlansHelper
       else
         string += "<td style=\"font-size:1.6em;padding:10px;border-bottom:1px solid black;color:#ccc;\">"
         string += plan.start.strftime("%d日 %H:%M～")
-        string += " now!" if Time.now.strftime("%d%H") == plan.start.strftime("%d%H")
+        string += "<span style=\"color:red;\">now!</span>" if Time.now.strftime("%d%H") == plan.start.strftime("%d%H")
         string += "</td>"
         string += "<td style=\"width:420px;font-size:1.6em;padding:10px;border-bottom:1px solid black;\">"
         string += plan.content

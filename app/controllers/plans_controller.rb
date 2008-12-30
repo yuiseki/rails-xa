@@ -4,16 +4,15 @@ class PlansController < ApplicationController
     end_time = Time.now+60*60*10
     @plans = Plan.find(:all, :order => "start", :conditions => ["start between ? and ? ", now_time, end_time])
     @accounts=[
-              ["ssig33", 28719],
-              ["yuiseki", 69676],
-              ["oquno", 126804],
-              ["akio0911", 72009],
-              ["takano32", 20100],
-              ["pha", 25763],
-              ["riko", 254761],
-              ["voqn", 62213],
+                ["ssig33", 28719],
+                ["yuiseki", 69676],
+                ["oquno", 126804],
+                ["akio0911", 72009],
+                ["takano32", 20100],
+                ["pha", 25763],
+                ["riko", 254761],
+                ["voqn", 62213],
               ]
-
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @plans }
@@ -21,7 +20,7 @@ class PlansController < ApplicationController
   end
 
   def all
-    @plans = Plan.find(:all)
+    @plans = Plan.find(:all, :order => "start", :conditions => ["start >= ?", Time.now-60*60])
   end
 
   def edit
