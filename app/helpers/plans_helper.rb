@@ -32,8 +32,8 @@ module PlansHelper
         string += "</td>"
 
         unless plan.flag
-          string += "<td rowspan=\"#{ROWSPAN}\">#{ link_to '編集', edit_plan_path(plan)}</td>"
-          string += "<td rowspan=\"#{ROWSPAN}\">#{ link_to '表示', plan_path(plan)}</td>"
+          string += "<td class=\"edit\" rowspan=\"#{ROWSPAN}\">#{ link_to '編集', edit_plan_path(plan)}</td>"
+          string += "<td class=\"show\" rowspan=\"#{ROWSPAN}\">#{ link_to '表示', plan_path(plan)}</td>"
         else
           string += "<td rowspan=\"#{ROWSPAN}\"><img src=\"#{LOCK_IMG_URL}\"></td>"
           string += "<td rowspan=\"#{ROWSPAN}\"></td>"

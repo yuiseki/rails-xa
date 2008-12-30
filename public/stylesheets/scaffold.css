@@ -2,8 +2,8 @@ body { background-color: #fff; color: #333; }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
-  line-height: 18px;
+  font-size:   10px;
+  line-height: 1.2em;
 }
 
 pre {
@@ -117,22 +117,32 @@ td.future {
 }
 
 td.plan-past {
-    width:420px;
-//    font-size:1.6em;
+    max-width:220px;
+    font-size:6em;
     padding:10px;
     border-bottom:1px solid black;
 }
 
 td.plan-now {
-    width:420px;
-//    font-size:1.6em;
+    max-width:220px;
+    font-size:6em;
+    color:red;
     padding:10px;
     border-bottom:1px solid black;
 }
 
 td.plan-future {
-    width:420px;
-//    font-size:1.6em;
+    max-width:220px;
+    font-size:6em;
     padding:10px;
+    border-bottom:1px solid black;
+}
+td.edit {
+    width:50px;
+    font-size:1.6em;
+    border-bottom:1px solid black;
+}
+td.show {
+    width:40px;
     border-bottom:1px solid black;
 }
