@@ -4,12 +4,6 @@ require 'uri'
 require 'open-uri'
 
 module PlansHelper
-  def ustream
-  end
-  def twitter
-    uri = "http://twitter.com/statuses/user_timeline/#{user}.atom"
-    feed = FeedNormalizer::FeedNormalizer.parse open(uri)
-  end
   def td(plan, i)
     string=""
 
