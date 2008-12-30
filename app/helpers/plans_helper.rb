@@ -15,16 +15,18 @@ module PlansHelper
 
     if Time.now < (plan.start + 10.minute * i)
       string += '<td class="past">'
-        string += start_to_string(plan.start, i)
+      string += start_to_string(plan.start, i)
+      string += "</td>"
     elsif (plan.start + 10.minute * (i+1)) < Time.now
       string += '<td class="future">'
-        string += start_to_string(plan.start, i)
+      string += start_to_string(plan.start, i)
+      string += "</td>"
     else
       string += '<td class="now">'
-        string += start_to_string(plan.start, i)
+      string += start_to_string(plan.start, i)
       string += 'now!'
+      string += "</td>"
     end
-    string += "</td>"
 
     if not plan.flag? and i == 0
       editable_time = Time.now+60*60
