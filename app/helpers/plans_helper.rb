@@ -1,4 +1,4 @@
-require 'feed-normalizer'
+#require 'feed-normalizer'
 require 'uri'
 require 'open-uri'
 
@@ -22,6 +22,7 @@ module PlansHelper
         string += plan.content
         string += "</td>"
         string += "<td>#{ link_to '編集', edit_plan_path(plan)}</td>"
+        string += "<td>#{ link_to '表示', plan_path(plan)}</td>"
       else
         string += "<td style=\"font-size:1.6em;padding:10px;border-bottom:1px solid black;color:#ccc;\">"
         string += plan.start.strftime("%d日 %H:%M～")
