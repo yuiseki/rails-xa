@@ -15,7 +15,12 @@
     <th></th>
     <th></th>
     <% Status::ACCOUNTS.each do |account| %>
-    <th><%=h account[:twitter] %></th>
+    <th>
+      <a href="<%=h account[:twitter] %>">
+      <img src="http://usericons.relucks.org/twitter/<%=h account[:twitter] %>" height="30" width="30"  />
+      <%=h account[:twitter] %>
+    </a>
+    </th>
     <% end %>
   </tr>
 <% for plan in @plans %>
