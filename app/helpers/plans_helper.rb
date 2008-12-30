@@ -16,7 +16,7 @@ module PlansHelper
       editable_time = Time.now+60*60
       if plan.start > editable_time
         string += "<td style=\"font-size:1.6em;padding:10px;border-bottom:1px solid black;\">"
-        string += plan.start.strftime("%d日 %H:%M～")
+        string += start_to_string(plan.start, i)
         string += " now!" if Time.now.strftime("%d%H") == plan.start.strftime("%d%H")
         string += "</td>"
         string += "<td style=\"width:420px;font-size:1.6em;padding:10px;border-bottom:1px solid black;\">"
@@ -26,7 +26,7 @@ module PlansHelper
         string += "<td>#{ link_to '表示', plan_path(plan)}</td>"
       else
         string += "<td style=\"font-size:1.6em;padding:10px;border-bottom:1px solid black;color:#ccc;\">"
-        string += plan.start.strftime("%d日 %H:%M～")
+        string += start_to_string(plan.start, i)
         string += "<span style=\"color:red;\">now!</span>" if Time.now.strftime("%d%H") == plan.start.strftime("%d%H")
         string += "</td>"
         string += "<td style=\"width:420px;font-size:1.6em;padding:10px;border-bottom:1px solid black;\">"
@@ -36,8 +36,8 @@ module PlansHelper
         string += "<td></td>"
       end
     else
-      string += "<td style=\"font-size:1.6em;padding:10px;border-bottom:1px solid black;color:red;\">"
-      string += plan.start.strftime("%d日 %H:%M～")
+      string += "<td style=\"font-size:1.6em;padding:10px;border-bottom:1px solid black;\">"
+      string += start_to_string(plan.start, i)
       string += "</td>"
       string += "<td style=\"width:420px;font-size:1.6em;padding:10px;border-bottom:1px solid black;\">"
       string += plan.content
@@ -45,5 +45,12 @@ module PlansHelper
       string += "<td><img src=\"http://assets0.twitter.com/images/icon_lock_sidebar.gif\"></td>"
       string += "<td></td>"
     end
+  end
+  private
+  def start_to_string(start, i)
+    string = ''
+    string += (start + 10.minute * i).strftime("%d日 %H:%M～")
+    string += (start + 10.minute * (i+1)).strftime("%H:%M")
+    return string
   end
 end
