@@ -34,7 +34,7 @@
     <%= td(plan) %>
     <% Status::ACCOUNTS.each do |account| %>
     <td class="<%=h account[:twitter] %>">
-      <% Status.find(:all, :order => "created_at", :conditions => ["user_screen_name = ? AND ? <= status_created_at AND status_created_at <= ?", account[:twitter], plan.start, plan.start + 1.hour]).each do |status| %>
+      <% Status.find(:all, :order => "status_created_at", :conditions => ["user_screen_name = ? AND ? <= status_created_at AND status_created_at <= ?", account[:twitter], plan.start, plan.start + 1.hour]).each do |status| %>
       [<%=h status.status_created_at.strftime("%H:%M") %>]<br/>
       <%=h status.status_text %><br/>
       <% end %>
