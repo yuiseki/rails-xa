@@ -73,7 +73,7 @@ div.progressBar div.background {
 }
 
 td.twitter{
-max-width:250px;
+max-width:200px;
 }
 td.ssig33 {
 background-color: #ddbbbb
@@ -99,6 +99,9 @@ background-color: #bbdddd
 td.voqn {
 background-color: #bbccdd
 }
+td.voqn {
+background-color: #bbccee
+}
 
 td.past {
 //    font-size:1.6em;
@@ -107,7 +110,7 @@ td.past {
     color:#ccc;
 }
 td.now {
-//    font-size:1.6em;
+    font-size:2em;
     padding:10px;
     border-bottom:1px solid black;
     color:#f00;
