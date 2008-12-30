@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #require 'feed-normalizer'
 require 'uri'
 require 'open-uri'
@@ -32,6 +33,7 @@ module PlansHelper
         string += plan.content
         string += "</td>"
         string += "<td><img src=\"http://assets0.twitter.com/images/icon_lock_sidebar.gif\"></td>"
+        string += "<td></td>"
       end
     else
       string += "<td style=\"font-size:1.6em;padding:10px;border-bottom:1px solid black;color:red;\">"

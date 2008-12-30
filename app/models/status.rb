@@ -29,6 +29,7 @@ class Status < ActiveRecord::Base
           s = Status.new
           s.status_id = status.elements['id'].text
           s.status_created_at = status.elements['created_at'].text
+          s.status_created_at += 9.hour
           s.user_location = status.elements['user/location'].text
           s.status_text = status.elements['text'].text
           s.user_screen_name = status.elements['user/screen_name'].text
