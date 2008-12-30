@@ -3,7 +3,7 @@
 <div class="ustream">
   <% for user in @accounts %>
     <embed flashvars='viewcount=true&amp;autoplay=false&amp;brand=embed' width='160' height='130' allowfullscreen='true' allowscriptaccess='always'
-    src='http://www.ustream.tv/flash/live/1/<%= user[1] %>' type='application/x-shockwave-flash' />
+    src='http://www.ustream.tv/flash/live/1/<%= user[:ustream] %>' type='application/x-shockwave-flash' />
   <% end %>
 </div>
 

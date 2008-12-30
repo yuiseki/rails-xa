@@ -4,14 +4,14 @@ class PlansController < ApplicationController
     end_time = Time.now+60*60*10
     @plans = Plan.find(:all, :order => "start", :conditions => ["start between ? and ? ", now_time, end_time])
     @accounts=[
-                ["ssig33", 28719],
-                ["yuiseki", 69676],
-                ["oquno", 126804],
-                ["akio0911", 72009],
-                ["takano32", 20100],
-                ["pha", 25763],
-                ["riko", 254761],
-                ["voqn", 62213],
+                {:twitter => "ssig33", :ustream => 28719},
+                {:twitter => "yuiseki", :ustream => 69676},
+                {:twitter => "oquno", :ustream => 126804}},
+                {:twitter => "akio0911", :ustream => 72009},
+                {:twitter => "takano32", :ustream => 20100},
+                {:twitter => "pha", :ustream => 25763},
+                {:twitter => "riko", :ustream => 254761},
+                {:twitter => "voqn", :ustream => 62213},
               ]
     respond_to do |format|
       format.html # index.html.erb
