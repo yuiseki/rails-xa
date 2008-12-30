@@ -72,6 +72,9 @@ div.progressBar div.background {
   width: 0%;
 }
 
+td.twitter{
+max-width:250px;
+}
 td.ssig33 {
 background-color: #ddbbbb
 }
