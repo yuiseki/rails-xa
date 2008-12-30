@@ -96,3 +96,23 @@ background-color: #bbdddd
 td.voqn {
 background-color: #bbccdd
 }
+
+td.past {
+    font-size:1.6em;
+    padding:10px;
+    border-bottom:1px solid black;
+    color:#ccc;
+}
+td.now {
+    font-size:1.6em;
+    padding:10px;
+    border-bottom:1px solid black;
+    color:#f00;
+}
+td.future {
+    font-size:1.6em;
+    padding:10px;
+    border-bottom:1px solid black;
+    color:#000;
+}
+
