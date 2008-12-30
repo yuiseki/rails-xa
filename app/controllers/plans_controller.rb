@@ -6,7 +6,7 @@ class PlansController < ApplicationController
     @accounts=[
                 {:twitter => "ssig33", :ustream => 28719},
                 {:twitter => "yuiseki", :ustream => 69676},
-                {:twitter => "oquno", :ustream => 126804}},
+                {:twitter => "oquno", :ustream => 126804},
                 {:twitter => "akio0911", :ustream => 72009},
                 {:twitter => "takano32", :ustream => 20100},
                 {:twitter => "pha", :ustream => 25763},
