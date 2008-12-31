@@ -69,8 +69,8 @@
         <% end %>
         <% Photo::ACCOUNTS.each do |flickr| %>
           <% if account[:twitter] == flickr[:user_name] %>
-            <% Photo.find(:all, :order => "taken_at", :conditions => ["user_name = ? AND taken_at BETWEEN ? AND ?", flickr[:user_name], plan.start+10.minute*i, plan.start+10.minute*(i+1) ] ).each do |photo| %>
-              <a href="<%= photo.url %>"><img class="flickr" style="max-widht:50px;max-height:100px;" src="<%= photo.url %>" /></a>
+            <% Photo.find(:all, :conditions => ["user_name = ? AND ? <= taken_at AND taken_at <=  ?", flickr[:user_name], plan.start+10.minute*i, plan.start+10.minute*(i+1) ] ).each do |photo| %>
+              <a href="<%= photo.url %>" class="highslide" onclick="return hs.expand(this)"><img class="flickr" style="max-width:80px;max-height:100px;" src="<%= photo.url %>" /></a>
             <% end %>
           <% end %>
         <% end %>
