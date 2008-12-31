@@ -11,7 +11,25 @@
     <% end %>
     <% end %>
 
-<hr />
+    <hr />
+
+    <div class="location_timeline">
+      <h2>最終通知位置情報</h2>
+      <% Status::ACCOUNTS.each do |account| %>
+      <% tw = Status.find(:first, :order => 'status_created_at DESC', :conditions => ['latitude IS NOT NULL AND longitude IS NOT NULL AND user_screen_name = ?', account[:twitter]]) %>
+
+      <% if tw %>
+      <img alt="<%= tw.user_screen_name %>" src="http://usericons.relucks.org/twitter/<%= tw.user_screen_name %>"  height="15" width="15"  />
+      <%=h tw.user_screen_name %> | 
+      <%=h tw.status_created_at.strftime("%Y/%m/%d %H:%M:%S") %> | 
+      [緯度:<%=h tw.latitude %> 経度<%=h tw.longitude %>] | 
+      <%=h tw.status_text %> |
+      <% end %>
+
+      <% end %>
+    </div>
+
+    <hr />
 
     <div class="new_timeline" style="margin:10px;">
       <h2>最近30分間の発言</h2>

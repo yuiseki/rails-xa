@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 class PlansController < ApplicationController
   def index
-    now_time = Time.now-60*60*2
-    end_time = Time.now+60*60*14
+#    now_time = Time.now-60*60*2
+    now_time = Time.now-2.hour
+#    end_time = Time.now+60*60*14
+    end_time = Time.now+14.hour
     @plans = Plan.find(:all, :order => "start", :conditions => ["start between ? and ? ", now_time, end_time])
     respond_to do |format|
       format.html # index.html.erb
