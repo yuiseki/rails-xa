@@ -40,25 +40,29 @@
     </th>
     <% end %>
   </tr>
+
 <% for plan in @plans %>
 <% 0.upto(5) do |i| %>
   <tr>
     <%= td(plan, i) %>
     <% Status::ACCOUNTS.each do |account| %>
-    <td class="twitter <%=h account[:twitter] %>">
-      <% Status.find(:all,
-                     :order => "status_created_at",
-                     :conditions => ["user_screen_name = ? AND ? <= status_created_at AND status_created_at <= ?",
-                                     account[:twitter], plan.start+10.minute*i, plan.start+10.minute*(i+1) ]
-                     ).each do |status| %>
-        [<%=h status.status_created_at.strftime("%H:%M") %>]<br/>
-        <%=h status.status_text %><br/>
+      <td class="twitter <%=h account[:twitter] %>">
+        <% Status.find(:all, :order => "status_created_at",  :conditions => ["user_screen_name = ? AND ? <= status_created_at AND status_created_at <= ?", account[:twitter], plan.start+10.minute*i, plan.start+10.minute*(i+1) ] ).each do |status| %>
+        [<%=h status.status_created_at.strftime("%H:%M") %>]<br/><%=h status.status_text %><br/>
+        <% Photo::ACCOUNTS.each do |flickr| %>
+          <% if account[:twitter] == flickr[:user_name] %>
+            <% Photo.find(:all, :order => "taken_at DESC", :limit => 1, :conditions => ["user_name = ?", flickr[:user_name]] ).each do |photo| %>
+                           <a href="<%= photo.url %>"><img class="flickr" style="max-widht:80px;max-height:80px;" src="<%= photo.url %>" /></a>
+                        <% end %>
+            <% end %>
+          <% end %>
       <% end %>
-    </td>
+      </td>
     <% end %>
   </tr>
 <% end %>
 <% end %>
+
 </table>
 
 <%= link_to "すべて見る", "/all" %>

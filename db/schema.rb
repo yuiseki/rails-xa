@@ -12,17 +12,17 @@
 ActiveRecord::Schema.define(:version => 3) do
 
   create_table "photos", :force => true do |t|
-    t.string   "url"
-    t.string   "user_name"
+    t.string   "url",        :default => "NULL"
+    t.string   "user_name",  :default => "NULL"
     t.datetime "taken_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "plans", :force => true do |t|
-    t.string   "content"
+    t.string   "content",    :default => "NULL"
     t.datetime "start"
-    t.boolean  "flag"
+    t.boolean  "flag",       :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

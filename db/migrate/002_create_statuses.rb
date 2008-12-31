@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 class CreateStatuses < ActiveRecord::Migration
+=begin
   def self.up
     create_table :statuses do |t|
       t.column :status_id, :integer # <id>1071821349</id>
@@ -16,6 +17,7 @@ class CreateStatuses < ActiveRecord::Migration
     end
     add_index :status, [:status_id], :unique=>true
   end
+=end
 
   def self.down
     drop_table :statuses

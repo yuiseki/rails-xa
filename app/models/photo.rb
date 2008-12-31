@@ -4,9 +4,14 @@ require "open-uri"
 
 class Photo < ActiveRecord::Base
   ACCOUNTS=[
-    {
-      :user_name => "akio0911", 
+    { :user_name => "akio0911",
       :feed_url => 'http://api.flickr.com/services/feeds/photos_public.gne?id=17653213@N05&lang=en-us&format=rss_200'
+    },
+    { :user_name => "yuiseki",
+      :feed_url => 'http://api.flickr.com/services/feeds/photos_public.gne?id=90041784@N00&lang=en-us&format=rss_200'
+    },
+    { :user_name => "oquno",
+      :feed_url => 'http://api.flickr.com/services/feeds/photos_public.gne?id=56264773@N00&lang=en-us&format=rss_200'
     },
   ]
   def self.get_photos
