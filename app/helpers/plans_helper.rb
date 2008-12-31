@@ -18,7 +18,8 @@ module PlansHelper
         string += plan.content
         string += "</td>"
 
-        string += "<td rowspan=\"#{ROWSPAN}\"><img src=\"#{LOCK_IMG_URL}\"></td>"
+        #string += "<td rowspan=\"#{ROWSPAN}\"><img src=\"#{LOCK_IMG_URL}\"></td>"
+        string += "<td rowspan=\"#{ROWSPAN}\">#{ link_to '編集', edit_plan_path(plan)}</td>"
         string += "<td rowspan=\"#{ROWSPAN}\"></td>"
       end
     elsif Time.now < (plan.start + 10.minute * i)
