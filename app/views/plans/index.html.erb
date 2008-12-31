@@ -13,6 +13,9 @@
 
     <hr />
 
+    <div id="mymap" style="width: 600px; height: 400px; margin:0px;padding:10px 0 0 5px;">
+    </div>
+
     <div class="location_timeline">
       <h2>最終通知位置情報</h2>
       <% Status::ACCOUNTS.each do |account| %>
@@ -23,7 +26,7 @@
       <%=h tw.user_screen_name %> | 
       <%=h tw.status_created_at.strftime("%Y/%m/%d %H:%M:%S") %> | 
       [緯度:<%=h tw.latitude %> 経度<%=h tw.longitude %>] | 
-      <%=h tw.status_text %> |
+      <%=h tw.status_text %> <br/>
       <% end %>
 
       <% end %>
@@ -41,7 +44,6 @@
       </div>
 
 <hr />
-
 <table>
   <tr>
     <th style="font-size:2em;">時間帯</th>
