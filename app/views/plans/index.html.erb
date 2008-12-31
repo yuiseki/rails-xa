@@ -58,9 +58,12 @@
         <a href="http://twitter.com/<%=h account[:twitter] %>">
           <img src="http://usericons.relucks.org/twitter/<%=h account[:twitter] %>" height="30" width="30"  />
           <%=h account[:twitter] %>
-	</a>
+        </a>
       <% else %>
-        <%=h account[:twitter] %>
+        <a href="http://github.com/yuiseki/rails-xa">
+          <img src="https://github.com/images/modules/header/logo.png" height="60" width="100"  />
+          <%=h account[:twitter] %>
+        </a>
       <% end %>
     </th>
     <% end %>
