@@ -16,7 +16,8 @@ class Status < ActiveRecord::Base
     {:twitter => "voqn"    , :ustream => 62213},
     # {:twitter => "showyou" , :ustream => 84075},
     {:twitter => "itkz"    , :ustream => 18990},
-    {:twitter => "momo_dev"    , :ustream => 18990},
+    {:twitter => "momo_dev", :ustream => 18990},
+    {:twitter => "kira88"  , :ustream => nil},
   ]
 
   def self.hour(time)
