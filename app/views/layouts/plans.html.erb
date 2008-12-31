@@ -6,6 +6,41 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>エクストリームアドホック忘年会</title>
   <%= stylesheet_link_tag 'scaffold' %>
+
+  <script src="http://maps.google.co.jp/maps?file=api&amp;v=2&amp;key=ABQIAAAANmKytc5ypjH_KbDCAjAbphT7fUKXf8Z2EQDBAwKo7cqaz_1bIBQTee5Ys0p-dOtvcUsNcMMumFXEaQ" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    var map;
+    function load(){
+      var center = new GLatLng(35.6984, 139.7732);
+      map = new GMap2(document.getElementById("mymap"));
+      map.setCenter(center, 12);
+    map.addControl(new GLargeMapControl());
+    map.addControl(new GScaleControl());
+    map.addControl(new GMapTypeControl());
+    map.addControl(new GOverviewMapControl());
+
+      <% Status::ACCOUNTS.each do |account| %>
+        <% tw = Status.find(:first, :order => 'status_created_at DESC', :conditions => ['latitude IS NOT NULL AND longitude IS NOT NULL AND user_screen_name = ?', account[:twitter]]) %>
+        <% if tw %>
+          var latlng = new GLatLng(<%=h tw.latitude %>, <%=h tw.longitude %>);
+
+          var icon = new GIcon(G_DEFAULT_ICON);
+	  icon.image =" http://usericons.relucks.org/twitter/<%= tw.user_screen_name %>";
+	  var icon_size = 48/2;
+          icon.iconSize = new GSize(icon_size, icon_size);
+          icon.iconAhchor = new GPoint(icon_size, icon_size);
+          icon.imageMap = [0,0, icon_size,0, icon_size,icon_size, 0,icon_size]; 
+
+          var mk = new GMarker(latlng, icon);
+          map.addOverlay(mk);
+
+        <% end %>
+      <% end %>
+    }
+    onload = load;
+    onunload = GUnload;
+  </script>
+
 </head>
 <body>
   <h1 style="font-size:4em;">
@@ -17,7 +52,6 @@
 <%= yield  %>
 
 </body>
-
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -27,7 +61,6 @@ try {
 var pageTracker = _gat._getTracker("UA-58913-8");
 pageTracker._trackPageview();
 } catch(err) {}</script>
-
 <!-- Highside JS -->
 <script type="text/javascript" src="javascripts/highslide/highslide.js"></script>
 <link rel="stylesheet" type="text/css" href="javascripts/highslide/highslide.css" />
@@ -35,9 +68,5 @@ pageTracker._trackPageview();
 	hs.graphicsDir = 'javascripts/highslide/graphics/';
 	hs.wrapperClassName = 'wide-border';
 </script>
-
-
-
-
 
 </html>
