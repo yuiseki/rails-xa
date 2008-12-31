@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 class PlansController < ApplicationController
+  caches_page :index
   def index
 #    now_time = Time.now-60*60*2
     now_time = Time.now-2.hour
