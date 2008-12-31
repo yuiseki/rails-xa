@@ -29,6 +29,9 @@ class Photo < ActiveRecord::Base
             item.elements.each('media:content') do |media_content|
               photo.url = media_content.attributes["url"] 
             end
+            item.elements.each('media:thumbnail') do |media_thumbnail|
+              photo.url_thumbnail = media_thumbnail.attributes["url"] 
+            end
             item.elements.each('dc:date.Taken') do |taken|
               photo.taken_at =  taken.text
             end
