@@ -4,15 +4,16 @@ require "open-uri"
 
 class Status < ActiveRecord::Base
   ACCOUNTS=[
-    {:twitter => "ssig33", :ustream => 28719},
-    {:twitter => "yuiseki", :ustream => 69676},
-    {:twitter => "oquno", :ustream => 126804},
+    {:twitter => "ssig33"  , :ustream => 28719},
+    {:twitter => "yuiseki" , :ustream => 69676},
+    {:twitter => "oquno"   , :ustream => 126804},
     {:twitter => "akio0911", :ustream => 72009},
     {:twitter => "takano32", :ustream => 20100},
-    {:twitter => "pha", :ustream => 25763},
-    {:twitter => "riko", :ustream => 254761},
-    {:twitter => "voqn", :ustream => 62213},
-    {:twitter => "showyou", :ustream => 84075},
+    {:twitter => "pha"     , :ustream => 25763},
+    {:twitter => "riko"    , :ustream => 254761},
+    {:twitter => "voqn"    , :ustream => 62213},
+    {:twitter => "showyou" , :ustream => 84075},
+    {:twitter => "itkz"    , :ustream => 18990},
   ]
 
   def self.hour(time)
