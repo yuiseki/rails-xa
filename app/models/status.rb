@@ -2,7 +2,7 @@
 require 'rubygems'
 require "rexml/document"
 require "open-uri"
-require 'lib/geocoder'
+#require 'lib/geocoder'
 
 class Status < ActiveRecord::Base
   ACCOUNTS=[

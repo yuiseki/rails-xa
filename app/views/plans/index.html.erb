@@ -15,6 +15,9 @@
 
     <hr />
 
+    <div id="mymap" style="width: 600px; height: 400px; margin:0px;padding:10px 0 0 5px;">
+    </div>
+
     <div class="location_timeline">
       <h2>最終通知位置情報</h2>
       <% Status::ACCOUNTS.each do |account| %>
@@ -25,7 +28,7 @@
       <%=h tw.user_screen_name %> | 
       <%=h tw.status_created_at.strftime("%Y/%m/%d %H:%M:%S") %> | 
       [緯度:<%=h tw.latitude %> 経度<%=h tw.longitude %>] | 
-      <%=h tw.status_text %> |
+      <%=h tw.status_text %> <br/>
       <% end %>
 
       <% end %>
@@ -43,7 +46,6 @@
       </div>
 
 <hr />
-
 <table>
   <tr>
     <th style="font-size:2em;">時間帯</th>
@@ -65,14 +67,14 @@
   <tr>
     <%= td(plan, i) %>
     <% Status::ACCOUNTS.each do |account| %>
-      <td class="twitter <%=h account[:twitter] %>">
+      <td class="twitter <%=h account[:twitter] %>" valign="top">
         <% Status.find(:all, :order => "status_created_at",  :conditions => ["user_screen_name = ? AND ? <= status_created_at AND status_created_at <= ?", account[:twitter], plan.start+10.minute*i, plan.start+10.minute*(i+1) ] ).each do |status| %>
           [<%=h status.status_created_at.strftime("%H:%M") %>]<br/><%=h status.status_text %><br/>
         <% end %>
         <% Photo::ACCOUNTS.each do |flickr| %>
           <% if account[:twitter] == flickr[:user_name] %>
             <% Photo.find(:all, :conditions => ["user_name = ? AND ? <= taken_at AND taken_at <=  ?", flickr[:user_name], plan.start+10.minute*i, plan.start+10.minute*(i+1) ] ).each do |photo| %>
-              <a href="<%= photo.url %>" class="highslide" onclick="return hs.expand(this)"><img class="flickr" style="max-width:80px;max-height:100px;" src="<%= photo.url %>" /></a>
+              <a href="<%= photo.url %>" class="highslide" onclick="return hs.expand(this)"><img class="flickr" style="max-width:80px;max-height:100px;" src="<%= photo.url_thumbnail || photo.url %>" /></a>
             <% end %>
           <% end %>
         <% end %>
