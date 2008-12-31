@@ -76,7 +76,8 @@
     <% Status::ACCOUNTS.each_with_index do |account, index| %>
       <td class="twitter user<%=h index%9 %>" valign="top">
         <% Status.find(:all, :order => "status_created_at",  :conditions => ["user_screen_name = ? AND ? <= status_created_at AND status_created_at <= ?", account[:twitter], plan.start+10.minute*i, plan.start+10.minute*(i+1) ] ).each do |status| %>
-          [<%=h status.status_created_at.strftime("%H:%M") %>]<br/><%=h status.status_text %><br/>
+          [<%=h status.status_created_at.strftime("%H:%M") %>]<br/>
+          <%= link_to status.status_text, "http://twitter.com/#{account[:twitter]}/status/#{status.status_id}" %><br/>
         <% end %>
         <% Photo::ACCOUNTS.each do |flickr| %>
           <% if account[:twitter] == flickr[:user_name] %>
