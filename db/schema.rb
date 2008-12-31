@@ -9,7 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 1) do
+ActiveRecord::Schema.define(:version => 3) do
+
+  create_table "photos", :force => true do |t|
+    t.string   "url"
+    t.string   "user_name"
+    t.datetime "taken_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "plans", :force => true do |t|
     t.string   "content"
@@ -18,5 +26,8 @@ ActiveRecord::Schema.define(:version => 1) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+# Could not dump table "statuses" because of following StandardError
+#   Unknown type 'latitude' for column 'float'
 
 end
