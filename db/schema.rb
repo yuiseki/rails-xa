@@ -9,14 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 4) do
+ActiveRecord::Schema.define(:version => 5) do
 
   create_table "photos", :force => true do |t|
-    t.string   "url",        :default => "NULL"
-    t.string   "user_name",  :default => "NULL"
+    t.string   "url",           :default => "NULL"
+    t.string   "user_name",     :default => "NULL"
     t.datetime "taken_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "url_thumbnail"
   end
 
   create_table "plans", :force => true do |t|
