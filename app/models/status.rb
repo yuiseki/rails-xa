@@ -20,7 +20,7 @@ class Status < ActiveRecord::Base
     {:twitter => "riko"     , :ustream => 254761},
     {:twitter => "bulkneets", :ustream => nil},
     {:twitter => "mi8_r"    , :ustream => nil},
-    {:twitter => "uta"      , :ustream => nil},
+    # {:twitter => "uta"      , :ustream => nil},
     {:twitter => "mizunon"  , :ustream => nil},
     {:twitter => "popona"   , :ustream => nil},
     {:twitter => "retlet"   , :ustream => nil},
