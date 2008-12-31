@@ -37,7 +37,7 @@ class Status < ActiveRecord::Base
 
   def self.get_xml
     ACCOUNTS.each do |accounts|
-      get_xml_page(accounts[:twitter], 1)
+      get_xml_page(accounts[:twitter], 1) unless accounts[:twitter] == "github"
     end
   end
 
