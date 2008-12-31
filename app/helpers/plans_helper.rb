@@ -42,7 +42,7 @@ module PlansHelper
     else
       string += "<td class=\"now\">"
       string += start_to_string(plan.start, i)
-      string += 'now!'
+      string += ' now!'
       string += "</td>"
 
       if i == 0

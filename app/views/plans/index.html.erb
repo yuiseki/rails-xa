@@ -35,7 +35,7 @@
   <tr>
     <%= td(plan, i) %>
     <% Status::ACCOUNTS.each do |account| %>
-    <td class="<%=h account[:twitter] %>">
+    <td class="twitter <%=h account[:twitter] %>">
       <% Status.find(:all,
                      :order => "status_created_at",
                      :conditions => ["user_screen_name = ? AND ? <= status_created_at AND status_created_at <= ?",

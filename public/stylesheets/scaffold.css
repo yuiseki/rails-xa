@@ -73,7 +73,7 @@ div.progressBar div.background {
 }
 
 td.twitter{
-max-width:200px;
+max-width:100px;
 }
 td.ssig33 {
 background-color: #ddbbbb
@@ -105,42 +105,45 @@ background-color: #bbccee
 
 td.past {
 //    font-size:1.6em;
-    padding:10px;
+    max-width:150px;
+    padding:5px;
     border-bottom:1px solid black;
     color:#ccc;
 }
 td.now {
     font-size:2em;
-    padding:10px;
+    max-width:150px;
+    padding:5px;
     border-bottom:1px solid black;
     color:#f00;
 }
 td.future {
 //    font-size:1.6em;
-    padding:10px;
+    max-width:150px;
+    padding:5px;
     border-bottom:1px solid black;
     color:#000;
 }
 
 td.plan-past {
     max-width:220px;
-    font-size:6em;
-    padding:10px;
+    font-size:4em;
+    padding:5px;
     border-bottom:1px solid black;
 }
 
 td.plan-now {
     max-width:220px;
-    font-size:6em;
+    font-size:4em;
     color:red;
-    padding:10px;
+    padding:5px;
     border-bottom:1px solid black;
 }
 
 td.plan-future {
     max-width:220px;
-    font-size:6em;
-    padding:10px;
+    font-size:4em;
+    padding:5px;
     border-bottom:1px solid black;
 }
 td.edit {

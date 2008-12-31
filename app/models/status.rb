@@ -12,6 +12,7 @@ class Status < ActiveRecord::Base
     {:twitter => "pha", :ustream => 25763},
     {:twitter => "riko", :ustream => 254761},
     {:twitter => "voqn", :ustream => 62213},
+    {:twitter => "showyou", :ustream => 84075},
   ]
 
   def self.hour(time)
@@ -20,7 +21,6 @@ class Status < ActiveRecord::Base
                 :conditions => ["status_created_at BETWEEN ? and ?",
                                 time-1.hours, time ]
                 )
-    return statuses
   end
 
   def self.get_xml
