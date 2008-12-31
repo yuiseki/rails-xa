@@ -15,12 +15,12 @@ class Status < ActiveRecord::Base
     {:twitter => "riko"    , :ustream => 254761},
     # {:twitter => "voqn"    , :ustream => 62213},
     # {:twitter => "showyou" , :ustream => 84075},
-    {:twitter => "itkz"    , :ustream => 18990},
-    {:twitter => "momo_dev", :ustream => 18990},
+    {:twitter => "itkz"     , :ustream => 18990},
+    {:twitter => "momo_dev" , :ustream => 18990},
     # {:twitter => "kira88"  , :ustream => nil},
-    {:twitter => "bulkneets"  , :ustream => nil},
-    {:twitter => "mi8_r"  , :ustream => nil},
-    {:twitter => "uta"  , :ustream => nil},
+    {:twitter => "bulkneets", :ustream => nil},
+    {:twitter => "mi8_r"    , :ustream => nil},
+    {:twitter => "uta"      , :ustream => nil},
     {:twitter => "popona"  , :ustream => nil},
   ]
 
