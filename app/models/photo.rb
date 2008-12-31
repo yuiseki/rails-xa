@@ -13,6 +13,9 @@ class Photo < ActiveRecord::Base
     { :user_name => "oquno",
       :feed_url => 'http://api.flickr.com/services/feeds/photos_public.gne?id=56264773@N00&lang=en-us&format=rss_200'
     },
+    { :user_name => "momo_dev",
+      :feed_url => 'http://api.flickr.com/services/feeds/photos_public.gne?id=7665030@N03&lang=en-us&format=rss_200'
+    },
   ]
   def self.get_photos
     ACCOUNTS.each do |account|
