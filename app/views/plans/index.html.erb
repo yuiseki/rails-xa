@@ -6,7 +6,7 @@
 </h2>
     <% if false %>
     <% Status::ACCOUNTS.each do |account| %>
-      <% if accounts.has_key?(:ustream) then %>
+      <% if accounts[:ustream] then %>
         <embed flashvars='viewcount=true&amp;autoplay=false&amp;brand=embed' width='160' height='130' allowfullscreen='true' allowscriptaccess='always'
         src='http://www.ustream.tv/flash/live/1/<%= account[:ustream] %>' type='application/x-shockwave-flash' />
       <% end %>
