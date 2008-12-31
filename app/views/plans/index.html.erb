@@ -1,4 +1,9 @@
-<h2>現在 <%= Time.now.strftime("%d日 %H:%M") %> の予定： <span style="font-size:2em;color:red;"><%= @plans[1].content %></span> </h2>
+<h2>
+  現在 <%= Time.now.strftime("%d日 %H:%M") %> の予定：
+  <span style="font-size:2em;color:red;"><%= @plans[1].content %></span>
+  次の予定：
+  <span style="font-size:2em;color:red;"><%= @plans[2].content %></span>
+</h2>
     <% if false %>
     <% Status::ACCOUNTS.each do |account| %>
       <embed flashvars='viewcount=true&amp;autoplay=false&amp;brand=embed' width='160' height='130' allowfullscreen='true' allowscriptaccess='always'
@@ -8,13 +13,14 @@
 
 <hr />
 
-    <h2>最近30分間の発言</h2>
-    <div style="margin:50px;">
-    <% Status.hour(Time.now).each do |tw| %>
-      <img title="<%= tw.user_screen_name %>" src="http://usericons.relucks.org/twitter/<%= tw.user_screen_name %>"  height="15" width="15"  />
-      <%= tw.status_text %>
-    </div>
-    <% end %>
+    <div class="new_timeline" style="margin:10px;">
+      <h2>最近30分間の発言</h2>
+      <% Status.hour(Time.now).each do |tw| %>
+        <img alt="<%= tw.user_screen_name %>" src="http://usericons.relucks.org/twitter/<%= tw.user_screen_name %>"  height="15" width="15"  />
+        <%= tw.user_screen_name %>:
+        <%= tw.status_text %> |
+      <% end %>
+      </div>
 
 <hr />
 

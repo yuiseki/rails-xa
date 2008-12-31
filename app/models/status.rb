@@ -17,7 +17,7 @@ class Status < ActiveRecord::Base
 
   def self.hour(time)
     statuses = Status.find(:all,
-                :order => "status_created_at",
+                :order => "status_created_at DESC",
                 :conditions => ["status_created_at BETWEEN ? and ?",
                                 time-30.minutes, time ]
                 )
