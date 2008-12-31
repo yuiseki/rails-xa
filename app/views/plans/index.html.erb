@@ -54,10 +54,14 @@
     <th></th>
     <% Status::ACCOUNTS.each do |account| %>
     <th>
-      <a href="http://twitter.com/<%=h account[:twitter] %>">
-        <img src="http://usericons.relucks.org/twitter/<%=h account[:twitter] %>" height="30" width="30"  />
+      <% unless account[:twitter] == 'github' %>
+        <a href="http://twitter.com/<%=h account[:twitter] %>">
+          <img src="http://usericons.relucks.org/twitter/<%=h account[:twitter] %>" height="30" width="30"  />
+          <%=h account[:twitter] %>
+	</a>
+      <% else %>
         <%=h account[:twitter] %>
-      </a>
+      <% end %>
     </th>
     <% end %>
   </tr>

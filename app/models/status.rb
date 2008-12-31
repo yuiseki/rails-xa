@@ -6,6 +6,7 @@ require "open-uri"
 
 class Status < ActiveRecord::Base
   ACCOUNTS=[
+    {:twitter => "github"  , :ustream => nil},
     # {:twitter => "ssig33"   , :ustream => 28719},
     {:twitter => "yuiseki"  , :ustream => 69676},
     {:twitter => "oquno"    , :ustream => 126804},
@@ -55,6 +56,26 @@ class Status < ActiveRecord::Base
           status.longitude = longitude
           status.update_location = true
           status.save
+        end
+      end
+    end
+  end
+
+  def self.get_xml_github
+    xml = open("http://github.com/feeds/yuiseki/commits/rails-xa/master").read
+    doc = REXML::Document.new xml
+    doc.elements.each('/feed') do |feed|
+      feed.elements.each('entry') do |entry|
+        status_text = entry.elements['author/name'].text + ':' + entry.elements['title'].text
+        status_created_at = DateTime.parse(entry.elements['updated'].text)
+        status_created_at += 9.hour + 8.hour
+        user_screen_name = 'github'
+        unless Status.find(:first, :conditions => ["status_created_at = ? AND user_screen_name = ?", status_created_at, user_screen_name])
+          s = Status.new
+          s.status_text = status_text
+          s.status_created_at = status_created_at
+          s.user_screen_name = user_screen_name
+          s.save
         end
       end
     end
