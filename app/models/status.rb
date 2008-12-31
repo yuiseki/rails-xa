@@ -6,22 +6,24 @@ require "open-uri"
 
 class Status < ActiveRecord::Base
   ACCOUNTS=[
-    # {:twitter => "ssig33"  , :ustream => 28719},
-    {:twitter => "yuiseki" , :ustream => 69676},
-    {:twitter => "oquno"   , :ustream => 126804},
-    {:twitter => "akio0911", :ustream => 72009},
-    {:twitter => "takano32", :ustream => 20100},
-    {:twitter => "pha"     , :ustream => 25763},
-    {:twitter => "riko"    , :ustream => 254761},
-    # {:twitter => "voqn"    , :ustream => 62213},
-    # {:twitter => "showyou" , :ustream => 84075},
+    # {:twitter => "ssig33"   , :ustream => 28719},
+    {:twitter => "yuiseki"  , :ustream => 69676},
+    {:twitter => "oquno"    , :ustream => 126804},
+    {:twitter => "akio0911" , :ustream => 72009},
+    {:twitter => "takano32" , :ustream => 20100},
     {:twitter => "itkz"     , :ustream => 18990},
-    {:twitter => "momo_dev" , :ustream => 18990},
-    # {:twitter => "kira88"  , :ustream => nil},
+    # {:twitter => "voqn"     , :ustream => 62213},
+    # {:twitter => "showyou"  , :ustream => 84075},
+    # {:twitter => "momo_dev" , :ustream => 18990},
+    # {:twitter => "kira88"   , :ustream => nil},
+    {:twitter => "pha"      , :ustream => 25763},
+    {:twitter => "riko"     , :ustream => 254761},
     {:twitter => "bulkneets", :ustream => nil},
     {:twitter => "mi8_r"    , :ustream => nil},
     {:twitter => "uta"      , :ustream => nil},
-    {:twitter => "popona"  , :ustream => nil},
+    {:twitter => "mizunon"  , :ustream => nil},
+    {:twitter => "popona"   , :ustream => nil},
+    {:twitter => "retlet"   , :ustream => nil},
   ]
 
   def self.hour(time)
