@@ -19,7 +19,7 @@ class Status < ActiveRecord::Base
     statuses = Status.find(:all,
                 :order => "status_created_at",
                 :conditions => ["status_created_at BETWEEN ? and ?",
-                                time-1.hours, time ]
+                                time-30.minutes, time ]
                 )
   end
 
