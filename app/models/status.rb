@@ -14,7 +14,7 @@ class Status < ActiveRecord::Base
     {:twitter => "itkz"     , :ustream => 18990},
     # {:twitter => "twit"     , :ustream => nil},
     {:twitter => "ssig33"   , :ustream => 28719},
-     {:twitter => "voqn"     , :ustream => 62213},
+    {:twitter => "VoQn"     , :ustream => 62213},
     {:twitter => "showyou"  , :ustream => 84075},
     # {:twitter => "momo_dev" , :ustream => 18990},
     # {:twitter => "kira88"   , :ustream => nil},

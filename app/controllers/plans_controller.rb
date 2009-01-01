@@ -9,22 +9,22 @@ class PlansController < ApplicationController
       d = params[:date][6,2].to_i
       if params[:time]
         h = params[:time].to_i
-        now_time = DateTime.new(y,m,d,h)
-        end_time = now_time + 4.hour
+        @now_time = DateTime.new(y,m,d,h)
+        @end_time = @now_time + 4.hour
       else
         h = 0
-        now_time = DateTime.new(y,m,d,h)
-        end_time = now_time + 24.hour
+        @now_time = DateTime.new(y,m,d,h)
+        @end_time = @now_time + 24.hour
       end
     else
-      y = now.year
-      m = now.month
-      d = now.day
-      h = now.hour - 1
-      now_time = DateTime.new(y,m,d,h)
-      end_time = now_time + 4.hour
+      y = 2009#now.year
+      m = 1#now.month
+      d = 1#now.day
+      h = 12#now.hour - 1
+      @now_time = DateTime.new(y,m,d,h)
+      @end_time = @now_time + 4.hour
     end
-    @plans = Plan.find(:all, :order => "start", :conditions => ["start between ? and ? ", now_time, end_time])
+    @plans = Plan.find(:all, :order => "start", :conditions => ["start between ? and ? ", @now_time, @end_time])
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @plans }

@@ -1,5 +1,5 @@
 <h2>
-  現在 <%= Time.now.strftime("%d日 %H:%M") %> の予定：
+  <%= @now_time.strftime("%d日 %H:%M") %> の予定：
   <span style="font-size:2em;color:red;"><%= @plans[1].content %></span>
   次の予定：
   <span style="font-size:2em;color:red;"><%= @plans[2].content %></span>
@@ -50,7 +50,7 @@
 
 <% start_time = DateTime.new(2008,12,31,12) %>
 <% now_time = DateTime.new(2008,12,31,12) %>
-<% 0.upto(12*3) do |i| %>
+<% 0.upto(34) do |i| %>
   <% now_time = start_time + i.hour %>
   <%= link_to now_time.strftime('%Y/%m/%d %H時'), "/p/"+now_time.strftime('%Y%m%d')+"/"+now_time.strftime('%H') %>
 <% end %>
