@@ -2,15 +2,22 @@
 class PlansController < ApplicationController
   caches_page :index
   def index
-    if params[:datetime] and params[:datetime].size == '2008010203'.size
-      y = params[:datetime][0,4].to_i
-      m = params[:datetime][4,2].to_i
-      d = params[:datetime][6,2].to_i
-      h = params[:datetime][8,2].to_i
+    if params[:date] and params[:date].size == '20080101'.size
+      y = params[:date][0,4].to_i
+      m = params[:date][4,2].to_i
+      d = params[:date][6,2].to_i
+    else
+      y = Time.now.year
+      m = Time.now.month
+      d = Time.now.day
+    end
+    if params[:time]
+      h = params[:time].to_i
       now_time = DateTime.new(y,m,d,h)
       end_time = now_time+4.hour
     else
-      now_time = Time.now-2.hour
+      h = (Time.now - 2.hour).hour
+      now_time = DateTime.new(y,m,d,h)
       end_time = Time.now+14.hour
     end
     @plans = Plan.find(:all, :order => "start", :conditions => ["start between ? and ? ", now_time, end_time])
