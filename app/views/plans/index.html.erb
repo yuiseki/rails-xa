@@ -15,7 +15,7 @@
 
     <hr />
 
-    <div id="mymap" style="width: 600px; height: 400px; margin:0px;padding:10px 0 0 5px;">
+    <div id="mymap" style="width: 850px; height: 300px; margin:0px;padding:10px 0 0 5px;">
     </div>
 
     <div class="location_timeline">
@@ -46,6 +46,18 @@
       </div>
 
 <hr />
+
+
+<% if false # パーマリンクを追加する部分 URL変更の可能性があるためコメントアウト  %>
+<% start_time = DateTime.new(2008,12,31,12) %>
+<% now_time = DateTime.new(2008,12,31,12) %>
+<% 0.upto(12*3) do |i| %>
+  <% now_time = start_time + i.hour %>
+  <%= link_to now_time.strftime('%Y/%m/%d %H:'), :action => 'index', :datetime => now_time.strftime('%Y%m%d%H') %>
+<% end %>
+<% end %>
+
+<hr />
 <table>
   <tr>
     <th style="font-size:2em;">時間帯</th>
@@ -60,7 +72,7 @@
           <%=h account[:twitter] %>
         </a>
       <% else %>
-        <a href="http://github.com/yuiseki/rails-xa">
+        <a href="http://github.com/yuiseki/rails-xa/commits/master/">
           <img src="https://github.com/images/modules/header/logo.png" height="60" width="100"  />
           <%=h account[:twitter] %>
         </a>
@@ -77,7 +89,11 @@
       <td class="twitter user<%=h index%9 %>" valign="top">
         <% Status.find(:all, :order => "status_created_at",  :conditions => ["user_screen_name = ? AND ? <= status_created_at AND status_created_at <= ?", account[:twitter], plan.start+10.minute*i, plan.start+10.minute*(i+1) ] ).each do |status| %>
           [<%=h status.status_created_at.strftime("%H:%M") %>]<br/>
-          <%= link_to status.status_text, "http://twitter.com/#{account[:twitter]}/status/#{status.status_id}" %><br/>
+          <% unless account[:twitter] == "github" %>
+            <%= link_to status.status_text, "http://twitter.com/#{account[:twitter]}/status/#{status.status_id}" %><br/>
+          <% else %>
+            <%= status.status_text %><br />
+          <% end %>
         <% end %>
         <% Photo::ACCOUNTS.each do |flickr| %>
           <% if account[:twitter] == flickr[:user_name] %>
