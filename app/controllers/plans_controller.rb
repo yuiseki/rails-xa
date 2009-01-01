@@ -14,11 +14,11 @@ class PlansController < ApplicationController
     if params[:time]
       h = params[:time].to_i
       now_time = DateTime.new(y,m,d,h)
-      end_time = now_time+4.hour
+      end_time = now_time + 4.hour
     else
-      h = (Time.now - 2.hour).hour
+      h = 0
       now_time = DateTime.new(y,m,d,h)
-      end_time = Time.now+14.hour
+      end_time = Time.now + 24.hour
     end
     @plans = Plan.find(:all, :order => "start", :conditions => ["start between ? and ? ", now_time, end_time])
     respond_to do |format|
