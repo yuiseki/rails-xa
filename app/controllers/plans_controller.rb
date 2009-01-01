@@ -20,7 +20,7 @@ class PlansController < ApplicationController
       y = now.year
       m = now.month
       d = now.day
-      h = now.hour
+      h = now.hour - 1
       now_time = DateTime.new(y,m,d,h)
       end_time = now + 4.hour
 =begin
