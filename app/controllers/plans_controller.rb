@@ -22,15 +22,7 @@ class PlansController < ApplicationController
       d = now.day
       h = now.hour - 1
       now_time = DateTime.new(y,m,d,h)
-      end_time = now + 4.hour
-=begin
-      y = 2008
-      m = 12
-      d = 31
-      h = 12
-      now_time = DateTime.new(y,m,d,h)
-      end_time = now + 48.hour
-=end
+      end_time = now_time + 4.hour
     end
     @plans = Plan.find(:all, :order => "start", :conditions => ["start between ? and ? ", now_time, end_time])
     respond_to do |format|
@@ -41,6 +33,20 @@ class PlansController < ApplicationController
 
   def all
     @plans = Plan.find(:all, :order => "start", :conditions => ["start >= ?", Time.now-60*60])
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @plans }
+    end
+  end
+
+  def yep2008
+    now_time = DateTime.new(2008, 12, 31, 12)
+    end_time = now_time + 48.hour
+    @plans = Plan.find(:all, :order => "start", :conditions => ["start between ? and ? ", now_time, end_time])
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @plans }
+    end
   end
 
   def edit
