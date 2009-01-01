@@ -6,10 +6,6 @@ class PlansController < ApplicationController
       y = params[:date][0,4].to_i
       m = params[:date][4,2].to_i
       d = params[:date][6,2].to_i
-    else
-      y = Time.now.year
-      m = Time.now.month
-      d = Time.now.day
       if params[:time]
         h = params[:time].to_i
         now_time = DateTime.new(y,m,d,h)
@@ -19,6 +15,10 @@ class PlansController < ApplicationController
         now_time = DateTime.new(y,m,d,h)
         end_time = Time.now + 24.hour
       end
+    else
+      y = Time.now.year
+      m = Time.now.month
+      d = Time.now.day
     end
     @plans = Plan.find(:all, :order => "start", :conditions => ["start between ? and ? ", now_time, end_time])
     respond_to do |format|
