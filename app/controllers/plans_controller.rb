@@ -10,15 +10,15 @@ class PlansController < ApplicationController
       y = Time.now.year
       m = Time.now.month
       d = Time.now.day
-    end
-    if params[:time]
-      h = params[:time].to_i
-      now_time = DateTime.new(y,m,d,h)
-      end_time = now_time + 4.hour
-    else
-      h = 0
-      now_time = DateTime.new(y,m,d,h)
-      end_time = Time.now + 24.hour
+      if params[:time]
+        h = params[:time].to_i
+        now_time = DateTime.new(y,m,d,h)
+        end_time = now_time + 4.hour
+      else
+        h = 0
+        now_time = DateTime.new(y,m,d,h)
+        end_time = Time.now + 24.hour
+      end
     end
     @plans = Plan.find(:all, :order => "start", :conditions => ["start between ? and ? ", now_time, end_time])
     respond_to do |format|
