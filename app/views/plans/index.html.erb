@@ -72,7 +72,7 @@
           <%=h account[:twitter] %>
         </a>
       <% else %>
-        <a href="http://github.com/yuiseki/rails-xa">
+        <a href="http://github.com/yuiseki/rails-xa/commits/master/">
           <img src="https://github.com/images/modules/header/logo.png" height="60" width="100"  />
           <%=h account[:twitter] %>
         </a>
@@ -89,7 +89,7 @@
       <td class="twitter user<%=h index%9 %>" valign="top">
         <% Status.find(:all, :order => "status_created_at",  :conditions => ["user_screen_name = ? AND ? <= status_created_at AND status_created_at <= ?", account[:twitter], plan.start+10.minute*i, plan.start+10.minute*(i+1) ] ).each do |status| %>
           [<%=h status.status_created_at.strftime("%H:%M") %>]<br/>
-          <%= link_to status.status_text, "http://twitter.com/#{account[:twitter]}/status/#{status.status_id}" %><br/>
+          <%= link_to status.status_text, "http://twitter.com/#{account[:twitter]}/status/#{status.status_id}" if account[:twitter] == "github" %><br/>
         <% end %>
         <% Photo::ACCOUNTS.each do |flickr| %>
           <% if account[:twitter] == flickr[:user_name] %>
