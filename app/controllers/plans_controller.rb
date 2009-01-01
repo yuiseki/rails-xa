@@ -2,6 +2,7 @@
 class PlansController < ApplicationController
   caches_page :index
   def index
+    now = Time.now
     if params[:date] and params[:date].size == '20080101'.size
       y = params[:date][0,4].to_i
       m = params[:date][4,2].to_i
@@ -13,15 +14,23 @@ class PlansController < ApplicationController
       else
         h = 0
         now_time = DateTime.new(y,m,d,h)
-        end_time = Time.now + 24.hour
+        end_time = now_time + 24.hour
       end
     else
-      y = Time.now.year
-      m = Time.now.month
-      d = Time.now.day
-      h = Time.now.hour
+      y = now.year
+      m = now.month
+      d = now.day
+      h = now.hour
       now_time = DateTime.new(y,m,d,h)
-      end_time = Time.now + 4.hour
+      end_time = now + 4.hour
+=begin
+      y = 2008
+      m = 12
+      d = 31
+      h = 12
+      now_time = DateTime.new(y,m,d,h)
+      end_time = now + 48.hour
+=end
     end
     @plans = Plan.find(:all, :order => "start", :conditions => ["start between ? and ? ", now_time, end_time])
     respond_to do |format|
