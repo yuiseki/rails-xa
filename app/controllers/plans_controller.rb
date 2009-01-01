@@ -19,6 +19,9 @@ class PlansController < ApplicationController
       y = Time.now.year
       m = Time.now.month
       d = Time.now.day
+      h = Time.now.hour
+      now_time = DateTime.new(y,m,d,h)
+      end_time = Time.now + 4.hour
     end
     @plans = Plan.find(:all, :order => "start", :conditions => ["start between ? and ? ", now_time, end_time])
     respond_to do |format|
