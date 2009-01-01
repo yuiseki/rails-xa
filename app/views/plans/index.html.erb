@@ -47,11 +47,14 @@
 
 <hr />
 
+
+<% if false # パーマリンクを追加する部分 URL変更の可能性があるためコメントアウト  %>
 <% start_time = DateTime.new(2008,12,31,12) %>
 <% now_time = DateTime.new(2008,12,31,12) %>
 <% 0.upto(12*3) do |i| %>
   <% now_time = start_time + i.hour %>
   <%= link_to now_time.strftime('%Y/%m/%d %H:'), :action => 'index', :datetime => now_time.strftime('%Y%m%d%H') %>
+<% end %>
 <% end %>
 
 <hr />
