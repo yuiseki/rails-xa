@@ -48,14 +48,14 @@
 <hr />
 
 
-<% if false # パーマリンクを追加する部分 URL変更の可能性があるためコメントアウト  %>
+<%# if false # パーマリンクを追加する部分 URL変更の可能性があるためコメントアウト  %>
 <% start_time = DateTime.new(2008,12,31,12) %>
 <% now_time = DateTime.new(2008,12,31,12) %>
 <% 0.upto(12*3) do |i| %>
   <% now_time = start_time + i.hour %>
   <%= link_to now_time.strftime('%Y/%m/%d %H:'), :action => 'index', :datetime => now_time.strftime('%Y%m%d%H') %>
 <% end %>
-<% end %>
+<%# end %>
 
 <hr />
 <table>
@@ -97,7 +97,7 @@
         <% end %>
         <% Photo::ACCOUNTS.each do |flickr| %>
           <% if account[:twitter] == flickr[:user_name] %>
-            <% Photo.find(:all, :conditions => ["user_name = ? AND ? <= taken_at AND taken_at <=  ?", flickr[:user_name], plan.start+10.minute*i, plan.start+10.minute*(i+1) ] ).each do |photo| %>
+            <% Photo.find(:all, :limit => 5, :conditions => ["user_name = ? AND ? <= taken_at AND taken_at <=  ?", flickr[:user_name], plan.start+10.minute*i, plan.start+10.minute*(i+1) ] ).each do |photo| %>
               <a href="<%= photo.url %>" class="highslide" onclick="return hs.expand(this)"><img class="flickr" style="max-width:80px;max-height:100px;" src="<%= photo.url_thumbnail || photo.url %>" /></a>
             <% end %>
           <% end %>
