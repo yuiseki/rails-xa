@@ -22,7 +22,7 @@ class PlansController < ApplicationController
       d = 31#now.day
       h = 23#now.hour - 1
       @now_time = DateTime.new(y,m,d,h)
-      @end_time = @now_time + 4.hour
+      @end_time = @now_time + 5.hour
     end
     @plans = Plan.find(:all, :order => "start", :conditions => ["start between ? and ? ", @now_time, @end_time])
     respond_to do |format|
