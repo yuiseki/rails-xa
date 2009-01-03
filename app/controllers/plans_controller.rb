@@ -17,10 +17,10 @@ class PlansController < ApplicationController
         @end_time = @now_time + 24.hour
       end
     else
-      y = 2009#now.year
-      m = 1#now.month
-      d = 1#now.day
-      h = 12#now.hour - 1
+      y = 2008#now.year
+      m = 12#now.month
+      d = 31#now.day
+      h = 23#now.hour - 1
       @now_time = DateTime.new(y,m,d,h)
       @end_time = @now_time + 4.hour
     end
