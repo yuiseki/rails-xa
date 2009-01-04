@@ -47,7 +47,6 @@ class Status < ActiveRecord::Base
   def self.geo(user_name, start_time, end_time)
     statuses = Status.find(:all,
                 :order => "status_created_at",
-                :limit => 1,
                 :conditions => ['latitude IS NOT NULL AND longitude IS NOT NULL AND user_screen_name = ? AND status_created_at >= ? AND status_created_at <= ?', user_name, start_time, end_time])
     if statuses.size == 0
       return false

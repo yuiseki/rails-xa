@@ -26,30 +26,12 @@
     function load(){
       var center = new GLatLng(35.6984, 139.7732);
       map = new GMap2(document.getElementById("mymap"));
-      map.setCenter(center, 12);
-    map.addControl(new GLargeMapControl());
-    map.addControl(new GScaleControl());
-    map.addControl(new GMapTypeControl());
-    map.addControl(new GOverviewMapControl());
-
-      <% Status::ACCOUNTS.each do |account| %>
-        <% tw = Status.geo(account[:twitter], @now_time, @end_time) %>
-        <% if tw %>
-        <% tw = tw[0] %>
-          var latlng = new GLatLng(<%=h tw.latitude %>, <%=h tw.longitude %>);
-
-          var icon = new GIcon(G_DEFAULT_ICON);
-	  icon.image =" http://usericons.relucks.org/twitter/<%= tw.user_screen_name %>";
-	  var icon_size = 48/2;
-          icon.iconSize = new GSize(icon_size, icon_size);
-          icon.iconAhchor = new GPoint(icon_size, icon_size);
-          icon.imageMap = [0,0, icon_size,0, icon_size,icon_size, 0,icon_size]; 
-
-          var mk = new GMarker(latlng, icon);
-          map.addOverlay(mk);
-
-        <% end %>
-      <% end %>
+      map.setCenter(center, 13);
+      map.addControl(new GLargeMapControl());
+      map.addControl(new GScaleControl());
+      map.addControl(new GMapTypeControl());
+      map.addControl(new GOverviewMapControl());
+      <%= gmaps_markers(@now_time, @end_time) %>
     }
     onload = load;
     onunload = GUnload;

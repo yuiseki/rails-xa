@@ -4,7 +4,28 @@ require 'uri'
 require 'open-uri'
 
 module PlansHelper
-  def gmaps_markers()
+  def gmaps_markers(start_time, end_time)
+    html=""
+    Status::ACCOUNTS.each do |account|
+       tw = Status.geo(account[:twitter], start_time, end_time)
+       if tw
+         #tw = tw[0]
+         tw.each do |po|
+           html += <<-EOS
+            var latlng = new GLatLng(#{po.latitude}, #{po.longitude});
+            var icon = new GIcon(G_DEFAULT_ICON);
+            icon.image =" http://usericons.relucks.org/twitter/#{po.user_screen_name}";
+            var icon_size = 48/2;
+            icon.iconSize = new GSize(icon_size, icon_size);
+            icon.iconAhchor = new GPoint(icon_size, icon_size);
+            icon.imageMap = [0,0, icon_size,0, icon_size,icon_size, 0,icon_size];
+            var mk = new GMarker(latlng, icon);
+            map.addOverlay(mk);
+           EOS
+         end
+       end
+    end
+    return html
   end
 
   def ustreamer
@@ -24,16 +45,18 @@ module PlansHelper
     Status::ACCOUNTS.each do |account|
       geos = Status.geo(account[:twitter], start_time, end_time)
       if geos
-        tw = geos[0]
-        html += <<-EOS
-          <div class="geo">
-          <img alt="#{tw.user_screen_name}" src="http://usericons.relucks.org/twitter/#{tw.user_screen_name}"  height="15" width="15" />
-          #{tw.user_screen_name} |
-          #{tw.status_created_at.strftime("%Y/%m/%d %H:%M")} |
-          [緯度:#{tw.latitude} 経度#{tw.longitude}] |
-          #{tw.status_text}
-          </div>
-        EOS
+        #tw = geos[0]
+        geos.each do |tw|
+          html += <<-EOS
+            <div class="geo">
+            <img alt="#{tw.user_screen_name}" src="http://usericons.relucks.org/twitter/#{tw.user_screen_name}"  height="15" width="15" />
+            #{tw.user_screen_name} |
+            #{tw.status_created_at.strftime("%y/%m/%d %H:%M")} |
+            [緯度:#{tw.latitude} 経度#{tw.longitude}] |
+            #{tw.status_text}
+            </div>
+          EOS
+        end
       end
     end
     return html
