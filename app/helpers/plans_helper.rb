@@ -4,6 +4,117 @@ require 'uri'
 require 'open-uri'
 
 module PlansHelper
+  def gmaps_markers()
+  end
+
+  def ustreamer
+    html=""
+    Status::ACCOUNTS.each do |account|
+      if accounts[:ustream] then
+        html += <<-EOS
+          <embed flashvars='viewcount=true&amp;autoplay=false&amp;brand=embed' width='160' height='130' allowfullscreen='true' allowscriptaccess='always'
+          src='http://www.ustream.tv/flash/live/1/<%= account[:ustream] %>' type='application/x-shockwave-flash' />
+        EOS
+      end
+    end
+  end
+
+  def location_list_html(start_time, end_time)
+    html = ""
+    Status::ACCOUNTS.each do |account|
+      geos = Status.geo(account[:twitter], start_time, end_time)
+      if geos
+        tw = geos[0]
+        html += <<-EOS
+          <div class="geo">
+          <img alt="#{tw.user_screen_name}" src="http://usericons.relucks.org/twitter/#{tw.user_screen_name}"  height="15" width="15" />
+          #{tw.user_screen_name} |
+          #{tw.status_created_at.strftime("%Y/%m/%d %H:%M")} |
+          [緯度:#{tw.latitude} 経度#{tw.longitude}] |
+          #{tw.status_text}
+          </div>
+        EOS
+      end
+    end
+    return html
+  end
+
+  def twitter_recent(time)
+    html = ""
+    Status.recent(time).each do |tw|
+      html += <<-EOS
+        <span class="tweets">
+        <img alt="#{tw.user_screen_name}" src="http://usericons.relucks.org/twitter/#{tw.user_screen_name}"  height="15" width="15"  />
+        #{tw.user_screen_name}:
+        #{tw.status_text} |
+        </span>
+      EOS
+    end
+    return html
+  end
+
+  def th
+    html = ""
+    Status::ACCOUNTS.each do |account|
+      unless account[:twitter] == 'github'
+        html += <<-EOS
+          <th>
+            <a href="http://twitter.com/#{account[:twitter]}">
+<img src="http://usericons.relucks.org/twitter/#{account[:twitter]}" height="30" width="30" />
+              #{account[:twitter]}
+            </a>
+          </th>
+        EOS
+      else
+        html += <<-EOS
+          <th>
+            <a href="http://github.com/yuiseki/rails-xa/commits/master/">
+            <img src="https://github.com/images/modules/header/logo.png" height="60" width="100"  />
+              #{account[:twitter]}
+            </a>
+          </th>
+        EOS
+      end
+    end
+    return html
+  end
+
+  def td_log(start)
+    html=""
+    Status::ACCOUNTS.each_with_index do |account, index|
+      html += <<-EOS
+        <td class="twitter user#{index%9} %>" valign="top">
+      EOS
+      Status.slice(account[:twitter], start).each do |status|
+        unless account[:twitter] == "github"
+          html += <<-EOS
+            <span class="tweets">
+              [#{status.status_created_at.strftime("%H:%M")}]<br />
+              #{link_to status.status_text, "http://twitter.com/" + account[:twitter] + "/status/" + status.status_id.to_s}
+            </span><br />
+          EOS
+        else
+          html += <<-EOS
+            <span class="tweets" style="color:red;font-size:1.3em;">
+              #{status.status_text}
+            </span><br />
+          EOS
+        end
+      end
+      Photo::ACCOUNTS.each do |flickr|
+        if account[:twitter] == flickr[:user_name]
+          Photo.slice(account[:twitter], start).each do |photo|
+            html += <<-EOS
+              <a href="#{photo.url}" class="highslide" onclick="return hs.expand(this)"><img class="flickr" style="max-width:80px;max-height:100px;" src="#{photo.url_thumbnail || photo.url}" /></a>
+            EOS
+          end
+        end
+      end
+    end
+    return html
+  end
+
+
   ROWSPAN = 6
   LOCK_IMG_URL = 'http://assets0.twitter.com/images/icon_lock_sidebar.gif'
   def td(plan, i)

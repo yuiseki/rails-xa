@@ -33,8 +33,9 @@
     map.addControl(new GOverviewMapControl());
 
       <% Status::ACCOUNTS.each do |account| %>
-        <% tw = Status.find(:first, :order => 'status_created_at DESC', :conditions => ['latitude IS NOT NULL AND longitude IS NOT NULL AND user_screen_name = ?', account[:twitter]]) %>
+        <% tw = Status.geo(account[:twitter], @now_time, @end_time) %>
         <% if tw %>
+        <% tw = tw[0] %>
           var latlng = new GLatLng(<%=h tw.latitude %>, <%=h tw.longitude %>);
 
           var icon = new GIcon(G_DEFAULT_ICON);

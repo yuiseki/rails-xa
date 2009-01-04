@@ -10,7 +10,7 @@ class PlansController < ApplicationController
       if params[:time]
         h = params[:time].to_i
         @now_time = DateTime.new(y,m,d,h)
-        @end_time = @now_time + 4.hour
+        @end_time = @now_time + 3.hour
       else
         h = 0
         @now_time = DateTime.new(y,m,d,h)
@@ -20,9 +20,9 @@ class PlansController < ApplicationController
       y = 2008#now.year
       m = 12#now.month
       d = 31#now.day
-      h = 23#now.hour - 1
+      h = 20#now.hour - 1
       @now_time = DateTime.new(y,m,d,h)
-      @end_time = @now_time + 5.hour
+      @end_time = @now_time + 12.hour
     end
     @plans = Plan.find(:all, :order => "start", :conditions => ["start between ? and ? ", @now_time, @end_time])
     respond_to do |format|
@@ -32,19 +32,21 @@ class PlansController < ApplicationController
   end
 
   def all
-    @plans = Plan.find(:all, :order => "start", :conditions => ["start >= ?", Time.now-60*60])
+    @plans = Plan.find(:all, :order => "start")
+    @now_time = DateTime.new(2008, 12, 31, 12)
+    @end_time = now_time + 48.hour
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { render :action => "index"}# index.html.erb
       format.xml  { render :xml => @plans }
     end
   end
 
   def yep2008
-    now_time = DateTime.new(2008, 12, 31, 12)
-    end_time = now_time + 48.hour
-    @plans = Plan.find(:all, :order => "start", :conditions => ["start between ? and ? ", now_time, end_time])
+    @now_time = DateTime.new(2008, 12, 31, 12)
+    @end_time = now_time + 48.hour
+    @plans = Plan.find(:all, :order => "start", :conditions => ["start between ? and ? ", @now_time, @end_time])
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { render :action => "index"}# index.html.erb
       format.xml  { render :xml => @plans }
     end
   end

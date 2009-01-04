@@ -4,104 +4,50 @@
   次の予定：
   <span style="font-size:2em;color:red;"><%= @plans[2].content %></span>
 </h2>
-    <% if false %>
-    <% Status::ACCOUNTS.each do |account| %>
-      <% if accounts[:ustream] then %>
-        <embed flashvars='viewcount=true&amp;autoplay=false&amp;brand=embed' width='160' height='130' allowfullscreen='true' allowscriptaccess='always'
-        src='http://www.ustream.tv/flash/live/1/<%= account[:ustream] %>' type='application/x-shockwave-flash' />
-      <% end %>
-    <% end %>
-    <% end %>
 
-    <hr />
+  <hr />
 
-    <div id="mymap" style="width: 850px; height: 300px; margin:0px;padding:10px 0 0 5px;">
+  <div id="mymap" style="width: 850px; height: 300px; margin:0px;padding:10px 0 0 5px;">    </div>
+
+  <div class="location_timeline">
+    <h2><%=h @now_time.strftime("%H:%M") %>から<%=h @end_time.strftime("%H:%M") %>の位置情報</h2>
+    <%= location_list_html(@now_time, @end_time) %>
+  </div>
+
+  <hr />
+
+    <div class="recent_timeline" style="margin:10px;">
+      <h2><%=h @now_time.strftime("%H:%M") %>あたり最近30分間の発言</h2>
+      <%= twitter_recent(@now_time) %>
     </div>
 
-    <div class="location_timeline">
-      <h2>最終通知位置情報</h2>
-      <% Status::ACCOUNTS.each do |account| %>
-      <% tw = Status.find(:first, :order => 'status_created_at DESC', :conditions => ['latitude IS NOT NULL AND longitude IS NOT NULL AND user_screen_name = ?', account[:twitter]]) %>
+  <hr />
 
-      <% if tw %>
-      <img alt="<%= tw.user_screen_name %>" src="http://usericons.relucks.org/twitter/<%= tw.user_screen_name %>"  height="15" width="15"  />
-      <%=h tw.user_screen_name %> | 
-      <%=h tw.status_created_at.strftime("%Y/%m/%d %H:%M:%S") %> | 
-      [緯度:<%=h tw.latitude %> 経度<%=h tw.longitude %>] | 
-      <%=h tw.status_text %> <br/>
-      <% end %>
-
-      <% end %>
-    </div>
-
-    <hr />
-
-    <div class="new_timeline" style="margin:10px;">
-      <h2>最近30分間の発言</h2>
-      <% Status.hour(Time.now).each do |tw| %>
-        <img alt="<%= tw.user_screen_name %>" src="http://usericons.relucks.org/twitter/<%= tw.user_screen_name %>"  height="15" width="15"  />
-        <%= tw.user_screen_name %>:
-        <%= tw.status_text %> |
-      <% end %>
-      </div>
+  <div class="permlink">
+    <% start_time = DateTime.new(2008,12,31,12) %>
+    <% now_time = DateTime.new(2008,12,31,12) %>
+    <% 0.upto(34) do |i| %>
+      <% now_time = start_time + i.hour %>
+      <%= link_to now_time.strftime('%Y/%m/%d %H時'), "/p/"+now_time.strftime('%Y%m%d')+"/"+now_time.strftime('%H') %>
+    <% end %>
+  </div>
 
 <hr />
 
-
-<% start_time = DateTime.new(2008,12,31,12) %>
-<% now_time = DateTime.new(2008,12,31,12) %>
-<% 0.upto(34) do |i| %>
-  <% now_time = start_time + i.hour %>
-  <%= link_to now_time.strftime('%Y/%m/%d %H時'), "/p/"+now_time.strftime('%Y%m%d')+"/"+now_time.strftime('%H') %>
-<% end %>
-
-<hr />
 <table>
   <tr>
     <th style="font-size:2em;">時間帯</th>
     <th style="font-size:2em;">予定</th>
     <th></th>
     <th></th>
-    <% Status::ACCOUNTS.each do |account| %>
-    <th>
-      <% unless account[:twitter] == 'github' %>
-        <a href="http://twitter.com/<%=h account[:twitter] %>">
-          <img src="http://usericons.relucks.org/twitter/<%=h account[:twitter] %>" height="30" width="30"  />
-          <%=h account[:twitter] %>
-        </a>
-      <% else %>
-        <a href="http://github.com/yuiseki/rails-xa/commits/master/">
-          <img src="https://github.com/images/modules/header/logo.png" height="60" width="100"  />
-          <%=h account[:twitter] %>
-        </a>
-      <% end %>
-    </th>
-    <% end %>
+    <%= th %>
   </tr>
 
 <% for plan in @plans %>
 <% 0.upto(5) do |i| %>
   <tr>
     <%= td(plan, i) %>
-    <% Status::ACCOUNTS.each_with_index do |account, index| %>
-      <td class="twitter user<%=h index%9 %>" valign="top">
-        <% Status.find(:all, :order => "status_created_at",  :conditions => ["user_screen_name = ? AND ? <= status_created_at AND status_created_at <= ?", account[:twitter], plan.start+10.minute*i, plan.start+10.minute*(i+1) ] ).each do |status| %>
-          [<%=h status.status_created_at.strftime("%H:%M") %>]<br/>
-          <% unless account[:twitter] == "github" %>
-            <%= link_to status.status_text, "http://twitter.com/#{account[:twitter]}/status/#{status.status_id}" %><br/>
-          <% else %>
-            <%= status.status_text %><br />
-          <% end %>
-        <% end %>
-        <% Photo::ACCOUNTS.each do |flickr| %>
-          <% if account[:twitter] == flickr[:user_name] %>
-            <% Photo.find(:all, :limit => 5, :conditions => ["user_name = ? AND ? <= taken_at AND taken_at <=  ?", flickr[:user_name], plan.start+10.minute*i, plan.start+10.minute*(i+1) ] ).each do |photo| %>
-              <a href="<%= photo.url %>" class="highslide" onclick="return hs.expand(this)"><img class="flickr" style="max-width:80px;max-height:100px;" src="<%= photo.url_thumbnail || photo.url %>" /></a>
-            <% end %>
-          <% end %>
-        <% end %>
-      </td>
-    <% end %>
+    <%= td_log(plan.start+10.minute*i) %>
   </tr>
 <% end %>
 <% end %>

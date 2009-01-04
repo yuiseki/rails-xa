@@ -20,6 +20,14 @@ class Photo < ActiveRecord::Base
       :feed_url => 'http://api.flickr.com/services/feeds/photos_public.gne?id=30788874@N05&lang=en-us&format=rss_200'
     },
   ]
+  def self.slice(user, time)
+    statuses = Photo.find(:all,
+                :order => "taken_at",
+                :limit => 10,
+                :conditions => ["user_name = ? AND ? <= taken_at AND taken_at <=  ?", user, time, time+10.minute ] 
+                )
+  end
+
   def self.get_photos
     ACCOUNTS.each do |account|
       xml = open(account[:feed_url]).read

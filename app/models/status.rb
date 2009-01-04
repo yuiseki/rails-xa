@@ -28,12 +28,32 @@ class Status < ActiveRecord::Base
     # {:twitter => "retlet"   , :ustream => nil},
   ]
 
-  def self.hour(time)
+  def self.recent(time)
     statuses = Status.find(:all,
                 :order => "status_created_at DESC",
                 :conditions => ["status_created_at BETWEEN ? and ?",
                                 time-30.minutes, time ]
                 )
+  end
+
+  def self.slice(user, time)
+    statuses = Status.find(:all,
+                :order => "status_created_at",
+                :conditions => ["user_screen_name = ? AND ? <= status_created_at AND status_created_at <= ?",
+                                user, time, time+10.minute ]
+                )
+  end
+
+  def self.geo(user_name, start_time, end_time)
+    statuses = Status.find(:all,
+                :order => "status_created_at",
+                :limit => 1,
+                :conditions => ['latitude IS NOT NULL AND longitude IS NOT NULL AND user_screen_name = ? AND status_created_at >= ? AND status_created_at <= ?', user_name, start_time, end_time])
+    if statuses.size == 0
+      return false
+    else
+      return statuses
+    end
   end
 
   def self.get_xml
